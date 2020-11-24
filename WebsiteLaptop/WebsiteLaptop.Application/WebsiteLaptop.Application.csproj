@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-WebsiteLaptop.Application-2F9C3EC6-84E8-43DD-95A5-2796AA0F1BD9</UserSecretsId>
+    <UserSecretsId>aspnet-WebsiteLaptop.Application-DA196248-05CF-40B1-BAFF-1F459760D3FB</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +11,14 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteLaptop.Data.EF\WebsiteLaptop.Data.EF.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Data\WebsiteLaptop.Data.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Infrastructure\WebsiteLaptop.Infrastructure.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Service\WebsiteLaptop.Service.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

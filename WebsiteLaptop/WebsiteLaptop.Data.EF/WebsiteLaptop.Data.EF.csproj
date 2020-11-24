@@ -4,4 +4,16 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteLaptop.Data\WebsiteLaptop.Data.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Infrastructure\WebsiteLaptop.Infrastructure.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

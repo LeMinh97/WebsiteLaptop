@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Implementation\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteLaptop.Data.EF\WebsiteLaptop.Data.EF.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Data\WebsiteLaptop.Data.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,8 @@
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.deps.json
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.pdb
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.csproj.CoreCompileInputs.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.AssemblyInfoInputs.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.AssemblyInfo.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.pdb

@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-WebsiteLaptop.Application-2F9C3EC6-84E8-43DD-95A5-2796AA0F1BD9")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-WebsiteLaptop.Application-DA196248-05CF-40B1-BAFF-1F459760D3FB")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebsiteLaptop.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
