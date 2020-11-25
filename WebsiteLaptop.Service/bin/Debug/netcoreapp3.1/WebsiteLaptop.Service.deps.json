@@ -1,0 +1,73 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "WebsiteLaptop.Service/1.0.0": {
+        "dependencies": {
+          "WebsiteLaptop.Data": "1.0.0",
+          "WebsiteLaptop.Data.EF": "1.0.0",
+          "WebsiteLaptop.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "WebsiteLaptop.Service.dll": {}
+        }
+      },
+      "WebsiteLaptop.Data/1.0.0": {
+        "runtime": {
+          "WebsiteLaptop.Data.dll": {}
+        }
+      },
+      "WebsiteLaptop.Data.EF/1.0.0": {
+        "dependencies": {
+          "WebsiteLaptop.Data": "1.0.0",
+          "WebsiteLaptop.Infrastructure": "1.0.0",
+          "WebsiteLaptop.Utilities": "1.0.0"
+        },
+        "runtime": {
+          "WebsiteLaptop.Data.EF.dll": {}
+        }
+      },
+      "WebsiteLaptop.Infrastructure/1.0.0": {
+        "runtime": {
+          "WebsiteLaptop.Infrastructure.dll": {}
+        }
+      },
+      "WebsiteLaptop.Utilities/1.0.0": {
+        "runtime": {
+          "WebsiteLaptop.Utilities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebsiteLaptop.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebsiteLaptop.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebsiteLaptop.Data.EF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebsiteLaptop.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebsiteLaptop.Utilities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AutoMapper\**" />
+    <Compile Remove="Implementation\**" />
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="ViewModels\**" />
+    <EmbeddedResource Remove="AutoMapper\**" />
+    <EmbeddedResource Remove="Implementation\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="ViewModels\**" />
+    <None Remove="AutoMapper\**" />
+    <None Remove="Implementation\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="ViewModels\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteLaptop.Data.EF\WebsiteLaptop.Data.EF.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Data\WebsiteLaptop.Data.csproj" />
+    <ProjectReference Include="..\WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
