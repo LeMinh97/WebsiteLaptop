@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Constants\**" />
+    <Compile Remove="Dtos\**" />
+    <Compile Remove="Helpers\**" />
+    <EmbeddedResource Remove="Constants\**" />
+    <EmbeddedResource Remove="Dtos\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <None Remove="Constants\**" />
+    <None Remove="Dtos\**" />
+    <None Remove="Helpers\**" />
+  </ItemGroup>
+
+</Project>
