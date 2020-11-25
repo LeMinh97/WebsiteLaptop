@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Application", "WebsiteLaptop.Application\WebsiteLaptop.Application.csproj", "{6D30F470-7919-4468-B362-93FB78876DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Application", "WebsiteLaptop.Application\WebsiteLaptop.Application.csproj", "{6D30F470-7919-4468-B362-93FB78876DCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Service", "WebsiteLaptop.Service\WebsiteLaptop.Service.csproj", "{4EE227A2-4184-4756-8A2E-9DD1FD04B7E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Service", "WebsiteLaptop.Service\WebsiteLaptop.Service.csproj", "{4EE227A2-4184-4756-8A2E-9DD1FD04B7E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Data", "WebsiteLaptop.Data\WebsiteLaptop.Data.csproj", "{0EF24732-7273-48B4-9D6F-1BA811674DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Data", "WebsiteLaptop.Data\WebsiteLaptop.Data.csproj", "{0EF24732-7273-48B4-9D6F-1BA811674DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Data.EF", "WebsiteLaptop.Data.EF\WebsiteLaptop.Data.EF.csproj", "{03C30FFB-36CB-46B8-86DE-27FBC0F3F571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Data.EF", "WebsiteLaptop.Data.EF\WebsiteLaptop.Data.EF.csproj", "{03C30FFB-36CB-46B8-86DE-27FBC0F3F571}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Infrastructure", "WebsiteLaptop.Infrastructure\WebsiteLaptop.Infrastructure.csproj", "{1A8DD8E3-62CA-4F6F-8045-2484A9E24B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Infrastructure", "WebsiteLaptop.Infrastructure\WebsiteLaptop.Infrastructure.csproj", "{1A8DD8E3-62CA-4F6F-8045-2484A9E24B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteLaptop.Utilities", "WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj", "{E2A54682-E144-4764-82F6-A56DA190FFAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsiteLaptop.Utilities", "WebsiteLaptop.Utilities\WebsiteLaptop.Utilities.csproj", "{E2A54682-E144-4764-82F6-A56DA190FFAE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Application", "1-Application", "{B4255EA2-1E9A-4832-B352-06BAD8FE1707}"
 EndProject

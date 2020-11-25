@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using WebsiteLaptop.Data.Enums;
 using WebsiteLaptop.Data.Interfaces;
@@ -7,6 +8,7 @@ using WebsiteLaptop.Infrastructure.SharedKernel;
 
 namespace WebsiteLaptop.Data.Entities
 {
+    [Table("ProductCategories")]
     public class ProductCategory : DomainEntity<int>, ISwitchable, ISortable, IDateTracking
     {
         public ProductCategory()
@@ -27,7 +29,7 @@ namespace WebsiteLaptop.Data.Entities
 
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }
-        public int SorOrder { set; get; }
+        public int SortOrder { set; get; }
         public Status Status { set; get; }
 
         public virtual ICollection<Product> Products { set; get; }

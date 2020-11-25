@@ -30,3 +30,9 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLapto
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.csproj.CopyComplete
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.dll
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.pdb
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.dll
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.csprojAssemblyReference.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.AssemblyInfoInputs.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.AssemblyInfo.cs
