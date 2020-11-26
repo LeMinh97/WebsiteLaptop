@@ -26,7 +26,9 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLapto
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.csprojAssemblyReference.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.AssemblyInfoInputs.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.AssemblyInfo.cs
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.csproj.CoreCompileInputs.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.csproj.CopyComplete
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.dll
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.runtimeconfig.json
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.runtimeconfig.dev.json
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data.EF\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.EF.genruntimeconfig.cache
