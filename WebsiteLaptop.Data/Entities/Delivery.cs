@@ -18,6 +18,11 @@ namespace WebsiteLaptop.Data.Entities
         public int OrderId { set; get; }
 
         public Status Status { set; get; }
+        [StringLength(450)]
+        public string UserId { set; get; }
+
+        [ForeignKey("UserId")]
+        public virtual AppUser AppUser { get; set; }
 
         [Required]
         public DateTime DateCreated { set; get; }

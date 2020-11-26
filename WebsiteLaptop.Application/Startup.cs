@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebsiteLaptop.Data.EF;
 using WebsiteLaptop.Data.Entities;
+using WebsiteLaptop.Application.Services;
 
 namespace WebsiteLaptop.Application
 {
@@ -38,7 +39,11 @@ namespace WebsiteLaptop.Application
                .AddEntityFrameworkStores<AppDbContext>()
                .AddDefaultTokenProviders();
 
+            // Add application services.
+            services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
             services.AddTransient<DbInitializer>();
+            services.AddTransient<IEmailSender, EmailSender>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

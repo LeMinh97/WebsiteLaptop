@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\MH\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
+      "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
       "projectName": "WebsiteLaptop.Infrastructure",
-      "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
-      "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\obj\\",
+      "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
