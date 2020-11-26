@@ -30,7 +30,7 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\bin\Debug\netcoreapp3.1\WebsiteLapto
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.csprojAssemblyReference.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.AssemblyInfoInputs.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.AssemblyInfo.cs
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.csproj.CoreCompileInputs.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.csproj.CopyComplete
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.dll
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Service\obj\Debug\netcoreapp3.1\WebsiteLaptop.Service.csproj.CoreCompileInputs.cache

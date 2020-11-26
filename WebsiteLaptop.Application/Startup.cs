@@ -14,6 +14,11 @@ using Microsoft.Extensions.Hosting;
 using WebsiteLaptop.Data.EF;
 using WebsiteLaptop.Data.Entities;
 using WebsiteLaptop.Application.Services;
+using WebsiteLaptop.Service.AotoMapper;
+using WebsiteLaptop.Data.IRepositories;
+using WebsiteLaptop.Data.EF.Repositories;
+using WebsiteLaptop.Service.Interfaces;
+using WebsiteLaptop.Service.Implementation;
 
 namespace WebsiteLaptop.Application
 {
@@ -42,8 +47,14 @@ namespace WebsiteLaptop.Application
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
-            services.AddTransient<DbInitializer>();
+            
+            services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
+
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<DbInitializer>();
+            services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductCategoryService, ProductCategoryService>();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
