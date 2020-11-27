@@ -19,6 +19,7 @@ using WebsiteLaptop.Data.IRepositories;
 using WebsiteLaptop.Data.EF.Repositories;
 using WebsiteLaptop.Service.Interfaces;
 using WebsiteLaptop.Service.Implementation;
+using AutoMapper;
 
 namespace WebsiteLaptop.Application
 {
@@ -44,12 +45,29 @@ namespace WebsiteLaptop.Application
                .AddEntityFrameworkStores<AppDbContext>()
                .AddDefaultTokenProviders();
 
+            // Configure Identity
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(30);
+                options.Lockout.MaxFailedAccessAttempts = 10;
+
+                // User settings
+                options.User.RequireUniqueEmail = true;
+            });
+
+            services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
             
-            services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
-
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();

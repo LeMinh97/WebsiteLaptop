@@ -21,8 +21,7 @@ namespace WebsiteLaptop.Data.Entities
         public decimal TotalMoney { set; get; }
         public Status Status { set; get; }
 
-        [StringLength(450)]
-        public string UserId { set; get; }
+        public Guid UserId { set; get; }
 
         [ForeignKey("UserId")]
         public virtual AppUser AppUser { get; set; }
