@@ -178,7 +178,7 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteL
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.TagHelpers.input.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.TagHelpers.output.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorCoreGenerate.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\ExternalLogin.cshtml.g.cs
