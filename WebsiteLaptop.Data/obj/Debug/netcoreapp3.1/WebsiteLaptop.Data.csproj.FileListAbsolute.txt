@@ -6,18 +6,3 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.deps.json
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.runtimeconfig.json
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.runtimeconfig.dev.json
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Data.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.csprojAssemblyReference.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.AssemblyInfoInputs.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.AssemblyInfo.cs
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.csproj.CoreCompileInputs.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.csproj.CopyComplete
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.dll
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Data\obj\Debug\netcoreapp3.1\WebsiteLaptop.Data.genruntimeconfig.cache
