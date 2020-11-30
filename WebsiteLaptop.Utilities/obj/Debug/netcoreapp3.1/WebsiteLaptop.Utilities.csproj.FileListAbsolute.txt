@@ -6,3 +6,12 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netco
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\bin\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.deps.json
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\bin\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.dll
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\bin\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.csprojAssemblyReference.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.AssemblyInfoInputs.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.AssemblyInfo.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.csproj.CoreCompileInputs.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.dll
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Utilities\obj\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.pdb

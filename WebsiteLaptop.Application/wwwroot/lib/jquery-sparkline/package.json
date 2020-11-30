@@ -1,11 +1,12 @@
 {
   "name": "jquery-sparkline",
-  "version": "2.4.0",
+  "version": "2.3.1",
   "description": "jQuery Sparklines",
   "main": "jquery.sparkline.js",
   "scripts": {
     "build": "node build",
-    "postbuild": "uglifyjs jquery.sparkline.js > jquery.sparkline.min.js"
+    "postbuild": "uglifyjs jquery.sparkline.js > jquery.sparkline.min.js",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
