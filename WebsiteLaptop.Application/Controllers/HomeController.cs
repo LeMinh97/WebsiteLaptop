@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using WebsiteLaptop.Application.Extensions;
 using WebsiteLaptop.Application.Models;
 
 namespace WebsiteLaptop.Application.Controllers
@@ -15,6 +16,7 @@ namespace WebsiteLaptop.Application.Controllers
     {
         public IActionResult Index()
         {
+            var email = User.GetSpecificClaim("Email");
             return View();
         }
 

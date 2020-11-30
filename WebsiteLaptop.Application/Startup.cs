@@ -24,6 +24,7 @@ using Microsoft.Extensions.Logging;
 using WebsiteLaptop.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
+using WebsiteLaptop.Application.Helpers;
 
 namespace WebsiteLaptop.Application
 {
@@ -74,6 +75,7 @@ namespace WebsiteLaptop.Application
 
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
             services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
