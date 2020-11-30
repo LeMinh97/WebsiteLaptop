@@ -44,7 +44,7 @@
       "destination": "wwwroot/lib/jquery/"
     },
     {
-      "library": "moment@2.29.1",
+      "library": "moment@2.19.1",
       "destination": "wwwroot/lib/moment/"
     },
     {
@@ -58,7 +58,7 @@
     },
     {
       "provider": "cdnjs",
-      "library": "bootbox.js@5.4.1",
+      "library": "bootbox.js@4.4.0",
       "destination": "wwwroot/lib/bootbox/"
     },
     {
