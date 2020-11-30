@@ -21,9 +21,6 @@ namespace WebsiteLaptop.Data.Entities
 
         public Guid UserId { set; get; }
 
-        [ForeignKey("UserId")]
-        public virtual AppUser AppUser { get; set; }
-
         [Required]
         public DateTime DateCreated { set; get; }
         public DateTime DateModified { set; get; }

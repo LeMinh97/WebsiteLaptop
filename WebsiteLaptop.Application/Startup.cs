@@ -20,6 +20,10 @@ using WebsiteLaptop.Data.EF.Repositories;
 using WebsiteLaptop.Service.Interfaces;
 using WebsiteLaptop.Service.Implementation;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
+using WebsiteLaptop.Infrastructure.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace WebsiteLaptop.Application
 {
@@ -70,16 +74,41 @@ namespace WebsiteLaptop.Application
 
             services.AddTransient<IEmailSender, EmailSender>();
             services.AddTransient<DbInitializer>();
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(options =>
+            {
+                options.CacheProfiles.Add("Default",
+                    new CacheProfile()
+                    {
+                        Duration = 60
+                    });
+                options.CacheProfiles.Add("Never",
+                    new CacheProfile()
+                    {
+                        Location = ResponseCacheLocation.None,
+                        NoStore = true
+                    });
+            })
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix,
+                        opts => { opts.ResourcesPath = "Resources"; }
+                    )
+                .AddDataAnnotationsLocalization()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                    options.JsonSerializerOptions.PropertyNamingPolicy = null;
+                });
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/tedu-{Date}.txt");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
