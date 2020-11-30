@@ -1,0 +1,6 @@
+2020-12-01T00:59:06.7900580+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-01T00:59:06.7979780+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-01T00:59:06.8053203+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-01T00:59:06.8085961+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-01T00:59:06.8107873+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
+2020-12-01T00:59:32.7901322+07:00 0HM4LB6GPRQQM:00000001 [INF] User logged in. (fdce0db4)

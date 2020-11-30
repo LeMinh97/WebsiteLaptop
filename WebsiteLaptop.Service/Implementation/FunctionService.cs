@@ -32,8 +32,7 @@ namespace WebsiteLaptop.Service.Implementation
 
         public Task<List<FunctionViewModel>> GetAll()
         {
-            var query = _functionRepository.FindAll(x => x.Status == Status.Active);
-            return _mapper.ProjectTo<FunctionViewModel>(query.OrderBy(x => x.ParentId)).ToListAsync();
+            return _mapper.ProjectTo<FunctionViewModel>(_functionRepository.FindAll()).ToListAsync();
         }
 
         public List<FunctionViewModel> GetAllByPermission(Guid userId)
