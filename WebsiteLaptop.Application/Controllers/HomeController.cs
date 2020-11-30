@@ -10,6 +10,7 @@ using WebsiteLaptop.Application.Models;
 
 namespace WebsiteLaptop.Application.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
