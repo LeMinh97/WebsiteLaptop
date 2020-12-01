@@ -64,6 +64,10 @@
     {
       "library": "animate.css@3.5.2",
       "destination": "wwwroot/lib/animate.css/"
+    },
+    {
+      "library": "mustache@2.3.0",
+      "destination": "wwwroot/lib/mustache/"
     }
   ]
 }
