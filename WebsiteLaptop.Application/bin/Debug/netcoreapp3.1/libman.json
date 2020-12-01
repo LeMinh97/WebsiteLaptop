@@ -68,6 +68,10 @@
     {
       "library": "mustache@2.3.0",
       "destination": "wwwroot/lib/mustache/"
+    },
+    {
+      "library": "twbs-pagination@1.4.1",
+      "destination": "wwwroot/lib/twbs-pagination/"
     }
   ]
 }
