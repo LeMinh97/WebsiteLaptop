@@ -13,6 +13,46 @@ namespace WebsiteLaptop.Data.Entities
     [Table("Products")]
     public class Product : DomainEntity<int>, ISwitchable, IDateTracking
     {
+        private Status status;
+
+        public Product()
+        {}
+
+        public Product(string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status)
+        {
+            Name = name;
+            CategoryId = categoryId;
+            Image = image;
+            Price = price;
+            OriginalPrice = originalPrice;
+            PromotionPrice = promotionPrice;
+            Description = description;
+            Content = content;
+            HomeFlag = homeFlag;
+            HotFlag = hotFlag;
+            Tags = tags;
+            Unit = unit;
+            Status = status;
+        }
+
+        public Product(int id, string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status)
+        {
+            Id = id;
+            Name = name;
+            CategoryId = categoryId;
+            Image = image;
+            Price = price;
+            OriginalPrice = originalPrice;
+            PromotionPrice = promotionPrice;
+            Description = description;
+            Content = content;
+            HomeFlag = homeFlag;
+            HotFlag = hotFlag;
+            Tags = tags;
+            Unit = unit;
+            Status = status;
+        }
+
         [StringLength(255)]
         [Required]
         public string Name { get; set; }
