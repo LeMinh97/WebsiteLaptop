@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj": {}
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj": {}
   },
   "projects": {
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj": {
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj",
+        "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj",
         "projectName": "WebsiteLaptop.Data.EF",
-        "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\obj\\",
+        "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\WebsiteLaptop.Data.EF.csproj",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
+        "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data.EF\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,14 +30,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj": {
-                "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj"
+              "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj": {
+                "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj"
               },
-              "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
-                "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj"
+              "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
+                "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj"
               },
-              "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
-                "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj"
+              "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
+                "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj"
               }
             }
           }
@@ -86,21 +89,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj": {
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
+        "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
         "projectName": "WebsiteLaptop.Data",
-        "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\obj\\",
+        "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
+        "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,8 +119,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
-                "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj"
+              "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
+                "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj"
               }
             }
           }
@@ -166,21 +172,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
         "projectName": "WebsiteLaptop.Infrastructure",
-        "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\obj\\",
+        "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
+        "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,21 +227,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
+        "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
         "projectName": "WebsiteLaptop.Utilities",
-        "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\obj\\",
+        "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
+        "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -270,7 +282,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

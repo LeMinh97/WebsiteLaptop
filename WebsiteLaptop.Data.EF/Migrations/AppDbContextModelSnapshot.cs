@@ -476,7 +476,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
-                    b.Property<Guid>("CustomerId")
+                    b.Property<Guid?>("CustomerId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CustomerMessage")
@@ -939,9 +939,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 {
                     b.HasOne("WebsiteLaptop.Data.Entities.AppUser", "User")
                         .WithMany()
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CustomerId");
                 });
 
             modelBuilder.Entity("WebsiteLaptop.Data.Entities.OrderDetail", b =>

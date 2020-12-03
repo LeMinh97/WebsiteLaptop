@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebsiteLaptop.Data.Entities;
+using WebsiteLaptop.Service.ViewModels.Order;
 using WebsiteLaptop.Service.ViewModels.Product;
 using WebsiteLaptop.Service.ViewModels.System;
 
@@ -17,6 +18,9 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<Function, FunctionViewModel>();
             CreateMap<AppUser, AppUserViewModel>();
             CreateMap<AppRole, AppRoleViewModel>();
+            CreateMap<Order, OrderViewModel>();
+            CreateMap<OrderDetail, OrderDetailViewModel>();
+            CreateMap<ProductCondition, ProductConditionViewModel>();
         }
     }
 }

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {}
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {}
   },
   "projects": {
-    "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
+    "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
+        "projectUniqueName": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
         "projectName": "WebsiteLaptop.Utilities",
-        "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\obj\\",
+        "projectPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\WebsiteLaptop.Utilities.csproj",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
+        "outputPath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Utilities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
