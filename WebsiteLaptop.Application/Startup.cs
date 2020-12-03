@@ -25,6 +25,8 @@ using WebsiteLaptop.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using WebsiteLaptop.Application.Helpers;
+using WebsiteLaptop.Application.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebsiteLaptop.Application
 {
@@ -91,6 +93,7 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             services.AddControllersWithViews(options =>
             {
