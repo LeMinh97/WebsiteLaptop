@@ -86,6 +86,9 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IFunctionRepository, FunctionRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IPermissionRepository, PermissionRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
+            services.AddTransient<IProductConditionRepository, ProductConditionRepository>();
 
             //Services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -93,6 +96,8 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IOrderService, OrderService>();
+
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             services.AddControllersWithViews(options =>
