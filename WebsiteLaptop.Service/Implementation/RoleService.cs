@@ -23,12 +23,13 @@ namespace WebsiteLaptop.Service.Implementation
         private IMapper _mapper;
         private IUnitOfWork _unitOfWork;
         public RoleService(RoleManager<AppRole> roleManager, IUnitOfWork unitOfWork,
-         IFunctionRepository functionRepository, IPermissionRepository permissionRepository)
+         IFunctionRepository functionRepository, IPermissionRepository permissionRepository, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _roleManager = roleManager;
             _functionRepository = functionRepository;
             _permissionRepository = permissionRepository;
+            _mapper = mapper;
         }
         public async Task<bool> AddAsync(AppRoleViewModel roleVm)
         {
@@ -135,7 +136,7 @@ namespace WebsiteLaptop.Service.Implementation
 
         public async Task UpdateAsync(AppRoleViewModel roleVm)
         {
-            var role = await _roleManager.FindByIdAsync(roleVm.Id);
+            var role = await _roleManager.FindByIdAsync(roleVm.Id.ToString());
             role.Description = roleVm.Description;
             role.Name = roleVm.Name;
             await _roleManager.UpdateAsync(role);
