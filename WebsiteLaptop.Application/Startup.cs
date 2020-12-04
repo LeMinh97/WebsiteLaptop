@@ -90,6 +90,7 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
             services.AddTransient<IProductConditionRepository, ProductConditionRepository>();
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
+            services.AddTransient<IProductImageRepository, ProductImageRepository>();
 
             //Services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();

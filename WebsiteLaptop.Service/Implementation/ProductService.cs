@@ -16,14 +16,17 @@ namespace WebsiteLaptop.Service.Implementation
     {
         private IProductRepository _productRepository;
         IProductQuantityRepository _productQuantityRepository;
+        IProductImageRepository _productImageRepository;
         private readonly IMapper _mapper;
         IUnitOfWork _unitOfWork;
 
         public ProductService(IProductRepository productRepository, IMapper mapper,
-            IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork)
+            IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork,
+            IProductImageRepository productImageRepository)
         {
             _productRepository = productRepository;
             _productQuantityRepository = productQuantityRepository;
+            _productImageRepository = productImageRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
@@ -111,6 +114,26 @@ namespace WebsiteLaptop.Service.Implementation
         public List<ProductQuantityViewModel> GetQuantities(int productId)
         {
             return _mapper.ProjectTo<ProductQuantityViewModel>(_productQuantityRepository.FindAll(x => x.ProductId == productId)).ToList();
+        }
+
+        public List<ProductImageViewModel> GetImages(int productId)
+        {
+            return _mapper.ProjectTo<ProductImageViewModel>(_productImageRepository.FindAll(x => x.ProductId == productId)).ToList();
+        }
+
+        public void AddImages(int productId, string[] images)
+        {
+            _productImageRepository.RemoveMultiple(_productImageRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var image in images)
+            {
+                _productImageRepository.Add(new ProductImage()
+                {
+                    Path = image,
+                    ProductId = productId,
+                    Caption = string.Empty
+                });
+            }
+
         }
     }
 }

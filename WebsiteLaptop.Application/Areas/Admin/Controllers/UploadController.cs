@@ -12,8 +12,8 @@ namespace WebsiteLaptop.Application.Areas.Admin.Controllers
 {
     public class UploadController : BaseController
     {
-        private readonly IWebHostEnvironment _hostingEnvironment;
-        public UploadController(IWebHostEnvironment hostingEnvironment)
+        private readonly IHostingEnvironment _hostingEnvironment;
+        public UploadController(IHostingEnvironment hostingEnvironment)
         {
             _hostingEnvironment = hostingEnvironment;
         }
