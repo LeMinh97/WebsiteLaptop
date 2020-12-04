@@ -23,6 +23,7 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<ProductCondition, ProductConditionViewModel>();
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
+            CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
         }
     }
 }

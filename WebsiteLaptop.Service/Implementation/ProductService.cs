@@ -17,16 +17,19 @@ namespace WebsiteLaptop.Service.Implementation
         private IProductRepository _productRepository;
         IProductQuantityRepository _productQuantityRepository;
         IProductImageRepository _productImageRepository;
+        IWholePriceRepository _wholePriceRepository;
         private readonly IMapper _mapper;
         IUnitOfWork _unitOfWork;
 
         public ProductService(IProductRepository productRepository, IMapper mapper,
             IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork,
+            IWholePriceRepository wholePriceRepository,
             IProductImageRepository productImageRepository)
         {
             _productRepository = productRepository;
             _productQuantityRepository = productQuantityRepository;
             _productImageRepository = productImageRepository;
+            _wholePriceRepository = wholePriceRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
@@ -134,6 +137,27 @@ namespace WebsiteLaptop.Service.Implementation
                 });
             }
 
+        }
+
+        public void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices)
+        {
+            _wholePriceRepository.RemoveMultiple(_wholePriceRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var wholePrice in wholePrices)
+            {
+                _wholePriceRepository.Add(new WholePrice()
+                {
+                    ProductId = productId,
+                    FromQuantity = wholePrice.FromQuantity,
+                    ToQuantity = wholePrice.ToQuantity,
+                    Price = wholePrice.Price,
+                    Description=wholePrice.Description
+                });
+            }
+        }
+
+        public List<WholePriceViewModel> GetWholePrices(int productId)
+        {
+            return _mapper.ProjectTo<WholePriceViewModel>(_wholePriceRepository.FindAll(x => x.ProductId == productId)).ToList();
         }
     }
 }

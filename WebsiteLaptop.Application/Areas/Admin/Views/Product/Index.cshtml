@@ -9,6 +9,7 @@
     <script src="~/lib/jQuery-EasyUI/jquery.easyui.min.js"></script>
     <script src="~/app/controllers/product/quantity-management.js"></script>
     <script src="~/app/controllers/product/image-management.js"></script>
+    <script src="~/app/controllers/product/whole-price-management.js"></script>
     <script src="~/app/controllers/product/index.js"></script>
     <script>
         var product = new productController();
@@ -54,7 +55,7 @@
                             <th>Image</th>
                             <th>Created Date</th>
                             <th>Status</th>
-                            <th width="10%">#</th>
+                            <th width="20%">#</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-content">
@@ -94,8 +95,8 @@
         <td>{{CreatedDate}}</td>
         <td>{{{Status}}}</td>
         <th scope="row">
-            <button class="btn btn-default btn-sm btn-edit" data-id="{{Id}}"><i class="fa fa-pencil"></i></button>
-            <button class="btn btn-danger btn-sm btn-delete" data-id="{{Id}}"><i class="fa fa-trash"></i></button>
+            <a class="btn  btn-sm btn-edit" data-id="{{Id}}"><i class="fa fa-pencil"></i></a>
+            <a class="btn  btn-sm btn-delete" data-id="{{Id}}"><i class="fa fa-trash"></i></a>
             <a href="#" data-id="{{Id}}" class="btn btn-xs btn-images"><i class="fa fa-image"></i></a>
             <a href="#" data-id="{{Id}}" class="btn btn-xs btn-quantity"><i class="fa fa-hourglass-start"></i></a>
             <a href="#" data-id="{{Id}}" class="btn btn-xs btn-whole-price"><i class="fa fa-money"></i></a>
@@ -105,3 +106,4 @@
 <partial name="_AddEditModal.cshtml"/>
 <partial name="_QuantityManagement.cshtml" />
 <partial name="_ImageManagement.cshtml" />
+<partial name="_WholePriceManagement.cshtml" />

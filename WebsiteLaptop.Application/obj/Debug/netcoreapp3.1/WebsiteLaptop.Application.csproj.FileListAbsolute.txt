@@ -323,8 +323,8 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Web
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\appsettings.json
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\libman.json
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Application.StaticWebAssets.xml
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Application.exe
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Application.deps.json
@@ -493,6 +493,9 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Ar
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\ProductCategory\_AddEditModal.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_AddEditModal.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_ImageManagement.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_QuantityManagement.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_WholePriceManagement.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\Index.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\_AddEditModal.cshtml.g.cs
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\_AssignPermission.cshtml.g.cs
@@ -548,5 +551,3 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\staticwe
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.dll
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.pdb
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_QuantityManagement.cshtml.g.cs
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\_ImageManagement.cshtml.g.cs
