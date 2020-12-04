@@ -315,15 +315,15 @@
                         Price: common.formatNumber(item.Price, 0),
                         CreatedDate: common.dateTimeFormatJson(item.DateCreated),
                         Status: common.getStatus(item.Status)
-                    });
-                    $('#lblTotalRecords').text(response.RowCount);
-                    if (render != '') {
-                        $('#tbl-content').html(render);
-                    }
-                    wrapPaging(response.RowCount, function () {
-                        loadData();
-                    }, isPageChanged);
+                    }); 
                 });
+                $('#lblTotalRecords').text(response.RowCount);
+                if (render != '') {
+                    $('#tbl-content').html(render);
+                }
+                wrapPaging(response.RowCount, function () {
+                    loadData();
+                }, isPageChanged);
             },
             error: function (status) {
                 console.log(status);
