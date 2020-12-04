@@ -101,6 +101,7 @@
                     // $('#txtImageM').val(data.ThumbnailImage);
 
                     $('#txtTagM').val(data.Tags);
+                    $('#txtAliasM').val(data.Alias);
 
                     CKEDITOR.instances.txtContent.setData(data.Content);
                     $('#ckStatusM').prop('checked', data.Status == 1);
@@ -159,6 +160,7 @@
                 //var image = $('#txtImageM').val();
 
                 var tags = $('#txtTagM').val();
+                var alias = $('#txtAliasM').val();
 
                 var content = CKEDITOR.instances.txtContent.getData();
                 var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
@@ -183,6 +185,7 @@
                         Tags: tags,
                         Unit: unit,
                         Status: status,
+                        Alias: alias
                     },
                     dataType: "json",
                     beforeSend: function () {
@@ -267,6 +270,7 @@
         //$('#txtImageM').val('');
 
         $('#txtTagM').val('');
+        $('#txtAliasM').val('');
 
         //CKEDITOR.instances.txtContentM.setData('');
         $('#ckStatusM').prop('checked', true);

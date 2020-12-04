@@ -7,7 +7,7 @@ using WebsiteLaptop.Infrastructure.SharedKernel;
 
 namespace WebsiteLaptop.Data.Entities
 {
-    [Table("ProductCondition")]
+    [Table("ProductConditions")]
     public class ProductCondition : DomainEntity<int>
     {
 

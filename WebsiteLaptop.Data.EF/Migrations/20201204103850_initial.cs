@@ -224,7 +224,8 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     DateCreated = table.Column<DateTime>(nullable: false),
                     DateModified = table.Column<DateTime>(nullable: false),
                     SortOrder = table.Column<int>(nullable: false),
-                    Status = table.Column<int>(nullable: false)
+                    Status = table.Column<int>(nullable: false),
+                    Alias = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -232,7 +233,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProductCondition",
+                name: "ProductConditions",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -241,7 +242,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProductCondition", x => x.Id);
+                    table.PrimaryKey("PK_ProductConditions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -303,7 +304,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     DateCreated = table.Column<DateTime>(nullable: false),
                     DateModified = table.Column<DateTime>(nullable: false),
                     Status = table.Column<int>(nullable: false),
-                    CustomerId = table.Column<Guid>(nullable: false)
+                    CustomerId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -313,7 +314,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         column: x => x.CustomerId,
                         principalTable: "AppUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -379,7 +380,8 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     Brand = table.Column<string>(nullable: true),
                     DateCreated = table.Column<DateTime>(nullable: false),
                     DateModified = table.Column<DateTime>(nullable: false),
-                    Status = table.Column<int>(nullable: false)
+                    Status = table.Column<int>(nullable: false),
+                    Alias = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -483,9 +485,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_ProductCondition_ProductConditionId",
+                        name: "FK_OrderDetails_ProductConditions_ProductConditionId",
                         column: x => x.ProductConditionId,
-                        principalTable: "ProductCondition",
+                        principalTable: "ProductConditions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -531,9 +533,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 {
                     table.PrimaryKey("PK_ProductQuantities", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductQuantities_ProductCondition_ProductConditionId",
+                        name: "FK_ProductQuantities_ProductConditions_ProductConditionId",
                         column: x => x.ProductConditionId,
-                        principalTable: "ProductCondition",
+                        principalTable: "ProductConditions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -712,7 +714,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 name: "AppRoles");
 
             migrationBuilder.DropTable(
-                name: "ProductCondition");
+                name: "ProductConditions");
 
             migrationBuilder.DropTable(
                 name: "Products");

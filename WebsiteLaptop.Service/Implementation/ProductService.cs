@@ -150,7 +150,7 @@ namespace WebsiteLaptop.Service.Implementation
                     FromQuantity = wholePrice.FromQuantity,
                     ToQuantity = wholePrice.ToQuantity,
                     Price = wholePrice.Price,
-                    Description=wholePrice.Description
+                    Description = wholePrice.Description
                 });
             }
         }
@@ -158,6 +158,18 @@ namespace WebsiteLaptop.Service.Implementation
         public List<WholePriceViewModel> GetWholePrices(int productId)
         {
             return _mapper.ProjectTo<WholePriceViewModel>(_wholePriceRepository.FindAll(x => x.ProductId == productId)).ToList();
+        }
+
+        public List<ProductViewModel> GetLastest(int top)
+        {
+            return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.Status == Status.Active).OrderByDescending(x => x.DateCreated)
+                .Take(top)).ToList();
+        }
+
+        public List<ProductViewModel> GetHotProduct(int top)
+        {
+            return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.Status == Status.Active && x.HotFlag == true)
+                .OrderByDescending(x => x.DateCreated).Take(top)).ToList();
         }
     }
 }

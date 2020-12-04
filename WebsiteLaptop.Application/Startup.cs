@@ -92,6 +92,9 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
+            services.AddTransient<ISlideRepository, SlideRepository>();
+
+            services.AddTransient<IFooterRepository, FooterRepository>();
 
             //Services
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -100,6 +103,7 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<ICommonService, CommonService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 

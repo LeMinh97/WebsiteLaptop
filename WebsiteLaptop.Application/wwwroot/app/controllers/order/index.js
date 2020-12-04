@@ -1,14 +1,14 @@
 ﻿var OrderController = function () {
     var cachedObj = {
         products: [],
-        productConditons: [],
+        productConditions: [],
         paymentMethods: [],
         orderStatuses: []
     }
     this.initialize = function () {
         $.when(loadOrderStatus(),
             loadPaymentMethod(),
-            loadProductConditons(),
+            loadProductConditions(),
             loadProducts())
             .done(function () {
                 loadData();
@@ -84,13 +84,13 @@
 
                         $.each(orderDetails, function (i, item) {
                             var products = getProductOptions(item.ProductId);
-                            var productConditons = getProductConditonOptions(item.ProductConditonId);
+                            var productConditions = getProductConditionOptions(item.ProductConditionId);
 
                             render += Mustache.render(templateDetails,
                                 {
                                     Id: item.Id,
                                     Products: products,
-                                    ProductConditons: productConditons,
+                                    ProductConditions: productConditions,
                                     Quantity: item.Quantity
                                 });
                         });
@@ -126,7 +126,7 @@
                         Id: $(item).data('id'),
                         ProductId: $(item).find('select.ddlProductId').first().val(),
                         Quantity: $(item).find('input.txtQuantity').first().val(),
-                        ProductConditonId: $(item).find('select.ddlProductConditonId').first().val(),
+                        ProductConditionId: $(item).find('select.ddlProductConditionId').first().val(),
                         OrderId: id
                     });
                 });
@@ -171,12 +171,12 @@
         $('#btnAddDetail').on('click', function () {
             var template = $('#template-table-order-details').html();
             var products = getProductOptions(null);
-            var productConditons = getProductConditonOptions(null);
+            var productConditions = getProductConditionOptions(null);
             var render = Mustache.render(template,
                 {
                     Id: 0,
                     Products: products,
-                    ProductConditons: productConditons,
+                    ProductConditions: productConditions,
                     Quantity: 0,
                     Total: 0
                 });
@@ -252,13 +252,13 @@
         });
     }
 
-    function loadProductConditons() {
+    function loadProductConditions() {
         return $.ajax({
             type: "GET",
-            url: "/Admin/Order/GetProductConditons",
+            url: "/Admin/Order/GetProductConditions",
             dataType: "json",
             success: function (response) {
-                cachedObj.productConditons = response;
+                cachedObj.productConditions = response;
             },
             error: function () {
                 common.notify('Has an error in progress', 'error');
@@ -278,16 +278,16 @@
         return products;
     }
 
-    function getProductConditonOptions(selectedId) {
-        var productConditons = "<select class='form-control ddlProductConditonId'>";
-        $.each(cachedObj.productConditons, function (i, productConditon) {
-            if (selectedId === productConditon.Id)
-                productConditons += '<option value="' + productConditon.Id + '" selected="select">' + productConditon.Name + '</option>';
+    function getProductConditionOptions(selectedId) {
+        var productConditions = "<select class='form-control ddlProductConditionId'>";
+        $.each(cachedObj.productConditions, function (i, productCondition) {
+            if (selectedId === productCondition.Id)
+                productConditions += '<option value="' + productCondition.Id + '" selected="select">' + productCondition.Name + '</option>';
             else
-                productConditons += '<option value="' + productConditon.Id + '">' + productConditon.Name + '</option>';
+                productConditions += '<option value="' + productCondition.Id + '">' + productCondition.Name + '</option>';
         });
-        productConditons += "</select>";
-        return productConditons;
+        productConditions += "</select>";
+        return productConditions;
     }
 
     function resetFormMaintainance() {

@@ -55,6 +55,13 @@ using WebsiteLaptop.Application.Extensions;
 #line hidden
 #nullable disable
 #nullable restore
+#line 7 "E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\Views\_ViewImports.cshtml"
+using WebsiteLaptop.Service.ViewModels.Product;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\Views\Manage\_ManageNav.cshtml"
 using WebsiteLaptop.Application.Views.Manage;
 
@@ -62,7 +69,7 @@ using WebsiteLaptop.Application.Views.Manage;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cc607afe35e278efd0bf49b118e7788a8c55e8c6", @"/Views/Manage/_ManageNav.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"785180aabf6a8a8d2caf5c5686c06de39f046fe0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56b06a8be2711fe31aa24a5f06bf14de4a35a23a", @"/Views/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb50c100a566dfae039e670b9a35fc1f58ba9858", @"/Views/Manage/_ViewImports.cshtml")]
     public class Views_Manage__ManageNav : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
@@ -113,7 +120,7 @@ WriteAttributeValue("", 255, ManageNavPages.IndexNavClass(ViewContext), 255, 42,
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c66241", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c66444", async() => {
                 WriteLiteral("Profile");
             }
             );
@@ -139,7 +146,7 @@ WriteAttributeValue("", 354, ManageNavPages.ChangePasswordNavClass(ViewContext),
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c67808", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c68011", async() => {
                 WriteLiteral("Password");
             }
             );
@@ -174,7 +181,7 @@ WriteAttributeValue("", 512, ManageNavPages.ExternalLoginsNavClass(ViewContext),
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c69608", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c69811", async() => {
                 WriteLiteral("External logins");
             }
             );
@@ -208,7 +215,7 @@ WriteAttributeValue("", 644, ManageNavPages.TwoFactorAuthenticationNavClass(View
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c611391", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc607afe35e278efd0bf49b118e7788a8c55e8c611594", async() => {
                 WriteLiteral("Two-factor authentication");
             }
             );

@@ -102,6 +102,19 @@ namespace WebsiteLaptop.Data.EF
                 });
             }
 
+            if (_context.ProductConditions.Count() == 0)
+            {
+                List<ProductCondition> listSize = new List<ProductCondition>()
+                {
+                    new ProductCondition() { Condition="Mới" },
+                    new ProductCondition() { Condition="Like new"},
+                    new ProductCondition() { Condition="90%" },
+                    new ProductCondition() { Condition="50%" },
+                    new ProductCondition() { Condition="Cũ" }
+                };
+                _context.ProductConditions.AddRange(listSize);
+            }
+
             if (_context.Slides.Count() == 0)
             {
                 List<Slide> slides = new List<Slide>()
@@ -129,42 +142,42 @@ namespace WebsiteLaptop.Data.EF
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
                 {
-                    new ProductCategory() { Name="Áo nam",ParentId = null,Status=Status.Active,SortOrder=1,
+                    new ProductCategory() { Name="Áo nam", Alias="ao-nam", ParentId = null,Status=Status.Active,SortOrder=1,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 1",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 2",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 3",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 4",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 5",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 1",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-1" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 2",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-2" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 3",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-3" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 4",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-4" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 5",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-5" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }
                     },
-                    new ProductCategory() { Name="Áo nữ",ParentId = null,Status=Status.Active ,SortOrder=2,
+                    new ProductCategory() { Name="Áo nữ",Alias="ao-nu",ParentId = null,Status=Status.Active ,SortOrder=2,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 6",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 7",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 8",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 9",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 10",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 6",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-6" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 7",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-7" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 8",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-8" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 9",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-9" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 10",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-10" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }},
-                    new ProductCategory() { Name="Giày nam",ParentId = null,Status=Status.Active ,SortOrder=3,
+                    new ProductCategory() { Name="Giày nam",Alias="giay-nam", ParentId = null,Status=Status.Active ,SortOrder=3,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 11",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 12",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 13",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 14",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 15",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 11",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-11" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 12",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-12" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 13",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-13" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 14",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-14" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 15",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-15" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }},
-                    new ProductCategory() { Name="Giày nữ",ParentId = null,Status=Status.Active,SortOrder=4,
+                    new ProductCategory() { Name="Giày nữ",Alias="giay-nu", ParentId = null,Status=Status.Active,SortOrder=4,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 16",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 17",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 18",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 19",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 20",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 16",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-16" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 17",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-17" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 18",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-18" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 19",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-19" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Sản phẩm 20",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-20" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
                         }}
                 };
                 _context.ProductCategories.AddRange(listProductCategory);

@@ -66,7 +66,7 @@
                     $('#txtDescM').val(data.Description);
 
                     $('#txtImageM').val(data.ThumbnailImage);
-
+                    $('#txtAliasM').val(data.Alias);
                     $('#ckStatusM').prop('checked', data.Status == 1);
                     $('#ckShowHomeM').prop('checked', data.HomeFlag);
                     $('#txtOrderM').val(data.SortOrder);
@@ -119,6 +119,7 @@
                 var image = $('#txtImageM').val();
                 var order = parseInt($('#txtOrderM').val());
                 var homeOrder = $('#txtHomeOrderM').val();
+                var alias = $('#txtAliasM').val();
 
                 var status = $('#ckStatusM').prop('checked') == true ? 1 : 0;
                 var showHome = $('#ckShowHomeM').prop('checked');
@@ -135,7 +136,8 @@
                         SortOrder: order,
                         HomeFlag: showHome,
                         Image: image,
-                        Status: status
+                        Status: status,
+                        Alias: alias,
                     },
                     dataType: "json",
                     beforeSend: function () {
@@ -169,6 +171,7 @@
         $('#txtOrderM').val('');
         $('#txtHomeOrderM').val('');
         $('#txtImageM').val('');
+        $('#txtAliasM').val('');
 
         $('#txtMetakeywordM').val('');
         $('#txtMetaDescriptionM').val('');

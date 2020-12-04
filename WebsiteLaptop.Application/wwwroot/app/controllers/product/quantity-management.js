@@ -82,7 +82,7 @@
     function loadProductConditions() {
         return $.ajax({
             type: "GET",
-            url: "/Admin/Bill/GetProductConditions",
+            url: "/Admin/Order/GetProductConditions",
             dataType: "json",
             success: function (response) {
                 cachedObj.productConditions = response;

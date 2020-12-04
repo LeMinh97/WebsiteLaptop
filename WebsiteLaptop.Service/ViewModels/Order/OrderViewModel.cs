@@ -38,7 +38,7 @@ namespace WebsiteLaptop.Service.ViewModels.Order
         public Guid? CustomerId { set; get; }
 
         public List<OrderDetailViewModel> OrderDetails { set; get; }
-        public List<BillViewModel> Bills { set; get; }
-        public List<DeliveryViewModel> Deliveries { set; get; }
+        //public List<BillViewModel> Bills { set; get; }
+        //public List<DeliveryViewModel> Deliveries { set; get; }
     }
 }

@@ -65,5 +65,7 @@ namespace WebsiteLaptop.Service.ViewModels.Product
         public DateTime DateModified { set; get; }
 
         public Status Status { set; get; }
+
+        public string Alias { get; set; }
     }
 }

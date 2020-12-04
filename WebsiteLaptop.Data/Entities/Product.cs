@@ -18,7 +18,7 @@ namespace WebsiteLaptop.Data.Entities
         public Product()
         {}
 
-        public Product(string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status)
+        public Product(string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status, string alias)
         {
             Name = name;
             CategoryId = categoryId;
@@ -33,9 +33,10 @@ namespace WebsiteLaptop.Data.Entities
             Tags = tags;
             Unit = unit;
             Status = status;
+            Alias = alias;
         }
 
-        public Product(int id, string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status)
+        public Product(int id, string name, int categoryId, string image, decimal price, decimal originalPrice, decimal? promotionPrice, string description, string content, bool? homeFlag, bool? hotFlag, string tags, string unit, Status status, string alias)
         {
             Id = id;
             Name = name;
@@ -51,6 +52,7 @@ namespace WebsiteLaptop.Data.Entities
             Tags = tags;
             Unit = unit;
             Status = status;
+            Alias = alias;
         }
 
         [StringLength(255)]
@@ -108,5 +110,7 @@ namespace WebsiteLaptop.Data.Entities
         public DateTime DateModified { set; get; }
 
         public Status Status { set; get; }
+
+        public string Alias { get; set; }
     }
 }

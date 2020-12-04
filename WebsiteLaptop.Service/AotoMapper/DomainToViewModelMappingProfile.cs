@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebsiteLaptop.Data.Entities;
+using WebsiteLaptop.Service.ViewModels.Common;
 using WebsiteLaptop.Service.ViewModels.Order;
 using WebsiteLaptop.Service.ViewModels.Product;
 using WebsiteLaptop.Service.ViewModels.System;
@@ -24,6 +25,8 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
             CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
+            CreateMap<Slide, SlideViewModel>().MaxDepth(2);
+            CreateMap<Footer, FooterViewModel>().MaxDepth(2);
         }
     }
 }

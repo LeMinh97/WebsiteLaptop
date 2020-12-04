@@ -10,8 +10,8 @@ using WebsiteLaptop.Data.EF;
 namespace WebsiteLaptop.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201203163116_order_ustomerid_nullable")]
-    partial class order_ustomerid_nullable
+    [Migration("20201204103850_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -623,6 +623,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
 
@@ -727,6 +730,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -775,7 +781,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCondition");
+                    b.ToTable("ProductConditions");
                 });
 
             modelBuilder.Entity("WebsiteLaptop.Data.Entities.ProductImage", b =>

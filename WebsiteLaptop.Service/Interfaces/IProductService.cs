@@ -32,5 +32,9 @@ namespace WebsiteLaptop.Service.Interfaces
         void AddWholePrice(int productId, List<WholePriceViewModel> wholePrices);
 
         List<WholePriceViewModel> GetWholePrices(int productId);
+
+        List<ProductViewModel> GetLastest(int top);
+
+        List<ProductViewModel> GetHotProduct(int top);
     }
 }

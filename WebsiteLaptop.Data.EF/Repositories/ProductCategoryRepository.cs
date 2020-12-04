@@ -17,7 +17,7 @@ namespace WebsiteLaptop.Data.EF.Repositories
 
         public List<ProductCategory> GetByAlias(string alias)
         {
-            throw new NotImplementedException();
+            return _context.ProductCategories.Where(x => x.Alias == alias).ToList();
         }
     }
 }

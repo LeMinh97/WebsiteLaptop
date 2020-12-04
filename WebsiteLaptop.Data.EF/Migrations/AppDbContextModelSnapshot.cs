@@ -621,6 +621,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Brand")
                         .HasColumnType("nvarchar(max)");
 
@@ -725,6 +728,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Alias")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
@@ -773,7 +779,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCondition");
+                    b.ToTable("ProductConditions");
                 });
 
             modelBuilder.Entity("WebsiteLaptop.Data.Entities.ProductImage", b =>
