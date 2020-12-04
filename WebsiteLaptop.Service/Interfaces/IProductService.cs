@@ -20,5 +20,9 @@ namespace WebsiteLaptop.Service.Interfaces
         ProductViewModel GetById(int id);
 
         void Save();
+
+        void AddQuantity(int productId, List<ProductQuantityViewModel> quantities);
+
+        List<ProductQuantityViewModel> GetQuantities(int productId);
     }
 }

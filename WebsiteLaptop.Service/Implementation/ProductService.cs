@@ -15,12 +15,15 @@ namespace WebsiteLaptop.Service.Implementation
     public class ProductService : IProductService
     {
         private IProductRepository _productRepository;
+        IProductQuantityRepository _productQuantityRepository;
         private readonly IMapper _mapper;
         IUnitOfWork _unitOfWork;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        public ProductService(IProductRepository productRepository, IMapper mapper,
+            IProductQuantityRepository productQuantityRepository, IUnitOfWork unitOfWork)
         {
             _productRepository = productRepository;
+            _productQuantityRepository = productQuantityRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
         }
@@ -89,6 +92,25 @@ namespace WebsiteLaptop.Service.Implementation
         public void Save()
         {
             _unitOfWork.Commit();
+        }
+
+        public void AddQuantity(int productId, List<ProductQuantityViewModel> quantities)
+        {
+            _productQuantityRepository.RemoveMultiple(_productQuantityRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach (var quantity in quantities)
+            {
+                _productQuantityRepository.Add(new ProductQuantity()
+                {
+                    ProductId = productId,
+                    ProductConditionId = quantity.ProductConditionId,
+                    Quantity = quantity.Quantity
+                });
+            }
+        }
+
+        public List<ProductQuantityViewModel> GetQuantities(int productId)
+        {
+            return _mapper.ProjectTo<ProductQuantityViewModel>(_productQuantityRepository.FindAll(x => x.ProductId == productId)).ToList();
         }
     }
 }

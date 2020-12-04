@@ -21,6 +21,7 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<Order, OrderViewModel>();
             CreateMap<OrderDetail, OrderDetailViewModel>();
             CreateMap<ProductCondition, ProductConditionViewModel>();
+            CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
         }
     }
 }
