@@ -36,5 +36,9 @@ namespace WebsiteLaptop.Service.Interfaces
         List<ProductViewModel> GetLastest(int top);
 
         List<ProductViewModel> GetHotProduct(int top);
+
+        List<ProductViewModel> GetRelatedProducts(int id, int top);
+
+        List<ProductViewModel> GetUpsellProducts(int top);
     }
 }

@@ -42,3 +42,8 @@ System.InvalidOperationException: The view 'Details' was not found. The followin
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-05T15:36:23.9123329+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-05T15:36:23.9221865+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-05T15:36:23.9250411+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-05T15:36:23.9273690+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-05T15:36:23.9303086+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)

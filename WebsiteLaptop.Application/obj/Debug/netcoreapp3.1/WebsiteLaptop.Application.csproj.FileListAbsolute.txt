@@ -550,6 +550,7 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Raz
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Manage\_StatusMessage.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Manage\_ViewImports.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Catalog.cshtml.g.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Brand\Default.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\MainMenu\Default.cshtml.g.cs

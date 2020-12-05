@@ -171,5 +171,22 @@ namespace WebsiteLaptop.Service.Implementation
             return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.Status == Status.Active && x.HotFlag == true)
                 .OrderByDescending(x => x.DateCreated).Take(top)).ToList();
         }
+
+        public List<ProductViewModel> GetRelatedProducts(int id, int top)
+        {
+            var product = _productRepository.FindById(id);
+            return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.Status == Status.Active
+                && x.Id != id && x.CategoryId == product.CategoryId)
+            .OrderByDescending(x => x.DateCreated)
+            .Take(top))
+            .ToList();
+        }
+
+        public List<ProductViewModel> GetUpsellProducts(int top)
+        {
+            return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.PromotionPrice != null)
+               .OrderByDescending(x => x.DateModified)
+               .Take(top)).ToList();
+        }
     }
 }
