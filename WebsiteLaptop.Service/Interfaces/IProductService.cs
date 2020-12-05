@@ -40,5 +40,7 @@ namespace WebsiteLaptop.Service.Interfaces
         List<ProductViewModel> GetRelatedProducts(int id, int top);
 
         List<ProductViewModel> GetUpsellProducts(int top);
+
+        bool CheckAvailability(int productId, int productCondition);
     }
 }

@@ -332,6 +332,14 @@ E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\staticwe
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.dll
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.pdb
 E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.csprojAssemblyReference.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.csproj.CoreCompileInputs.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.MvcApplicationPartsAssemblyInfo.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.MvcApplicationPartsAssemblyInfo.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorAssemblyInfo.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorAssemblyInfo.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.AssemblyInfoInputs.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\appsettings.json
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\libman.json
@@ -485,14 +493,6 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\Web
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Service.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\bin\Debug\netcoreapp3.1\WebsiteLaptop.Utilities.pdb
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.csprojAssemblyReference.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.csproj.CoreCompileInputs.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.MvcApplicationPartsAssemblyInfo.cs
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.MvcApplicationPartsAssemblyInfo.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorAssemblyInfo.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorAssemblyInfo.cs
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.AssemblyInfoInputs.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.TagHelpers.input.cache
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.TagHelpers.output.cache
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.RazorCoreGenerate.cache
@@ -532,6 +532,7 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Raz
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignedOut.cshtml.g.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
@@ -551,6 +552,7 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Raz
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Manage\_ViewImports.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Catalog.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Search.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Brand\Default.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\MainMenu\Default.cshtml.g.cs
@@ -573,4 +575,3 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\sta
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
-E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Search.cshtml.g.cs

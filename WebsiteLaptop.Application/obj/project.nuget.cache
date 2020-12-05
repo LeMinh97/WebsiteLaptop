@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "G6AgRBAFtEjmSaiafdwlqs92sXmVpW5BkPCfoG9Lt5WwRKJ8QduXl9T+VbvSsYcpfdo3v77tIHBSPZit4m3Jkw==",
+  "dgSpecHash": "A+fOJLk3xAdPFIhl+ZoHWv//4NVqetBv7W12HJwtt3LBb4EswT35ov2Lcrzr2jKR2DT292z8XhaVtFzO1HHvdw==",
   "success": true,
   "projectFilePath": "E:\\Code KLTN\\WebsiteLaptop\\WebsiteLaptop.Application\\WebsiteLaptop.Application.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.0\\microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
+    "C:\\Users\\MH\\.nuget\\packages\\microsoft.aspnetcore.session\\2.2.0\\microsoft.aspnetcore.session.2.2.0.nupkg.sha512",
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\MH\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

@@ -188,5 +188,13 @@ namespace WebsiteLaptop.Service.Implementation
                .OrderByDescending(x => x.DateModified)
                .Take(top)).ToList();
         }
+
+        public bool CheckAvailability(int productId, int productCondition)
+        {
+            var quantity = _productQuantityRepository.FindSingle(x => x.ProductConditionId == productCondition && x.ProductId == productId);
+            if (quantity == null)
+                return false;
+            return quantity.Quantity > 0;
+        }
     }
 }

@@ -11,6 +11,8 @@ namespace WebsiteLaptop.Utilities.Constants
         {
             public const string AdminRole = "Admin";
         }
+
+        public const string CartSession = "CartSession";
         public class UserClaims
         {
             public const string Roles = "Roles";

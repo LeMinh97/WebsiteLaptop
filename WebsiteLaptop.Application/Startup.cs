@@ -71,6 +71,11 @@ namespace WebsiteLaptop.Application
             });
 
             services.AddSingleton(AutoMapperConfig.RegisterMappings().CreateMapper());
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromHours(2);
+                options.Cookie.HttpOnly = true;
+            });
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
@@ -152,6 +157,7 @@ namespace WebsiteLaptop.Application
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();

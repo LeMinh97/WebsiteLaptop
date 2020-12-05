@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using WebsiteLaptop.Service.Interfaces;
 using WebsiteLaptop.Application.Models.ProductViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebsiteLaptop.Application.Controllers
 {
@@ -14,12 +15,14 @@ namespace WebsiteLaptop.Application.Controllers
         IProductService _productService;
         IProductCategoryService _productCategoryService;
         IConfiguration _configuration;
-        public ProductController(IProductService productService, IConfiguration configuration,
-            IProductCategoryService productCategoryService)
+        IOrderService _orderService;
+        public ProductController(IProductService productService, IConfiguration configuration, IOrderService orderService,
+        IProductCategoryService productCategoryService)
         {
             _productService = productService;
             _productCategoryService = productCategoryService;
             _configuration = configuration;
+            _orderService = orderService;
         }
 
         [Route("products.html")]
@@ -54,6 +57,11 @@ namespace WebsiteLaptop.Application.Controllers
             model.RelatedProducts = _productService.GetRelatedProducts(id, 9);
             model.UpsellProducts = _productService.GetUpsellProducts(6);
             model.ProductImages = _productService.GetImages(id);
+            model.ProductConditions = _orderService.GetProductConditions().Select(x => new SelectListItem()
+            {
+                Text = x.Condition,
+                Value = x.Id.ToString()
+            }).ToList();
             return View(model);
         }
 

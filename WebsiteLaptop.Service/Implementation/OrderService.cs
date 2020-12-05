@@ -97,7 +97,7 @@ namespace WebsiteLaptop.Service.Implementation
             _orderRepository.Update(order);
         }
 
-        public List<ProductConditionViewModel> GetProductCondition()
+        public List<ProductConditionViewModel> GetProductConditions()
         {
             return _mapper.ProjectTo<ProductConditionViewModel>(_productConditionRepository.FindAll()).ToList();
         }

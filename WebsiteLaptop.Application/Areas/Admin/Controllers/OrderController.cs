@@ -95,7 +95,7 @@ namespace WebsiteLaptop.Application.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetProductConditions()
         {
-            var productConditions = _orderService.GetProductCondition();
+            var productConditions = _orderService.GetProductConditions();
             return new OkObjectResult(productConditions);
         }
 

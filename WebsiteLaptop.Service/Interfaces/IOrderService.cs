@@ -26,7 +26,7 @@ namespace WebsiteLaptop.Service.Interfaces
 
         List<OrderDetailViewModel> GetOrderDetails(int orderId);
 
-        List<ProductConditionViewModel> GetProductCondition();
+        List<ProductConditionViewModel> GetProductConditions();
 
         void Save();
     }
