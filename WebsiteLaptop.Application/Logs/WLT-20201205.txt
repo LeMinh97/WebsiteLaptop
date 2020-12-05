@@ -1,0 +1,44 @@
+2020-12-05T14:50:40.9219743+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-05T14:50:40.9336056+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-05T14:50:40.9378840+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-05T14:50:40.9400324+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-05T14:50:40.9440065+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
+2020-12-05T15:15:46.6063108+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-05T15:15:46.6138023+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-05T15:15:46.6218230+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-05T15:15:46.6257076+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-05T15:15:46.6389383+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
+2020-12-05T15:17:47.6713192+07:00 0HM4OUNRVJ9N5:00000001 [ERR] The view '"Details"' was not found. Searched locations: ["/Views/Product/Details.en-US.cshtml", "/Views/Product/Details.en.cshtml", "/Views/Product/Details.cshtml", "/Views/Shared/Details.en-US.cshtml", "/Views/Shared/Details.en.cshtml", "/Views/Shared/Details.cshtml", "/Pages/Shared/Details.en-US.cshtml", "/Pages/Shared/Details.en.cshtml", "/Pages/Shared/Details.cshtml"] (9bb2756c)
+2020-12-05T15:17:49.2682286+07:00 0HM4OUNRVJ9N5:00000001 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.InvalidOperationException: The view 'Details' was not found. The following locations were searched:
+/Views/Product/Details.en-US.cshtml
+/Views/Product/Details.en.cshtml
+/Views/Product/Details.cshtml
+/Views/Shared/Details.en-US.cshtml
+/Views/Shared/Details.en.cshtml
+/Views/Shared/Details.cshtml
+/Pages/Shared/Details.en-US.cshtml
+/Pages/Shared/Details.en.cshtml
+/Pages/Shared/Details.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|21_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
