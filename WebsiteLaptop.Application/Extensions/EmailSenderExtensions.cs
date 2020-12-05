@@ -11,8 +11,8 @@ namespace WebsiteLaptop.Application.Extensions
     {
         public static Task SendEmailConfirmationAsync(this IEmailSender emailSender, string email, string link)
         {
-            return emailSender.SendEmailAsync(email, "Confirm your email",
-                $"Please confirm your account by clicking this link: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
+            return emailSender.SendEmailAsync(email, "Xác nhận email của bạn",
+                $"Cảm ơn bạn đã đăng kí tài khoản tại Website Laptop. Để hoàn tất quá trình đăng kí, hãy nhấn vào link: <a href='{HtmlEncoder.Default.Encode(link)}'>link</a>");
         }
     }
 }
