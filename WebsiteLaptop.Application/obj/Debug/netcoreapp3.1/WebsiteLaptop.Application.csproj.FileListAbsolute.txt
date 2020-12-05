@@ -573,3 +573,4 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\sta
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Search.cshtml.g.cs
