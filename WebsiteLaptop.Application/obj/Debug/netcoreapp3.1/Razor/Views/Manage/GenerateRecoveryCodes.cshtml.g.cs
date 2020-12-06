@@ -69,7 +69,7 @@ using WebsiteLaptop.Application.Views.Manage;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1ec679b88fa6d255b858cdd9411867821a27c34b", @"/Views/Manage/GenerateRecoveryCodes.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56b06a8be2711fe31aa24a5f06bf14de4a35a23a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cf0516932e5fb6f913aeebe83e1f6b9ff3d681dc", @"/Views/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb50c100a566dfae039e670b9a35fc1f58ba9858", @"/Views/Manage/_ViewImports.cshtml")]
     public class Views_Manage_GenerateRecoveryCodes : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<WebsiteLaptop.Application.Models.ManageViewModels.GenerateRecoveryCodesViewModel>
     {

@@ -576,3 +576,4 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Web
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\WebsiteLaptop.Application.genruntimeconfig.cache
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\HeaderCart\Default.cshtml.g.cs

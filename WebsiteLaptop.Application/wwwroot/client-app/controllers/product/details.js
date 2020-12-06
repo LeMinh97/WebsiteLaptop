@@ -18,9 +18,14 @@
                     productCondition: productConditionId
                 },
                 success: function () {
-                    alert(1);
+                    common.notify('Product was added successful', 'success');
+                    loadHeaderCart();
                 }
             });
         });
+    }
+
+    function loadHeaderCart() {
+        $("#headerCart").load("/AjaxContent/HeaderCart");
     }
 } 
