@@ -4,3 +4,8 @@
 2020-12-06T00:38:03.0495114+07:00  [INF] Hosting environment: "Development" (c3307c92)
 2020-12-06T00:38:03.0522982+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
 2020-12-06T00:39:25.4626239+07:00  [INF] Application is shutting down... (90f52c38)
+2020-12-06T21:58:38.2733936+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-06T21:58:38.2813443+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-06T21:58:38.2861424+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-06T21:58:38.2889475+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-06T21:58:38.2925431+07:00  [INF] Content root path: "E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)

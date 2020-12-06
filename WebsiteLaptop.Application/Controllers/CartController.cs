@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using WebsiteLaptop.Application.Extensions;
 using WebsiteLaptop.Application.Models;
+using WebsiteLaptop.Application.Services;
+using WebsiteLaptop.Data.Enums;
 using WebsiteLaptop.Service.Interfaces;
+using WebsiteLaptop.Service.ViewModels.Order;
 using WebsiteLaptop.Utilities.Constants;
 
 namespace WebsiteLaptop.Application.Controllers
@@ -14,10 +18,18 @@ namespace WebsiteLaptop.Application.Controllers
     {
         IProductService _productService;
         IOrderService _orderService;
-        public CartController(IProductService productService, IOrderService orderService)
+        IViewRenderService _viewRenderService;
+        IConfiguration _configuration;
+        IEmailSender _emailSender;
+        public CartController(IProductService productService,
+            IViewRenderService viewRenderService, IEmailSender emailSender,
+            IConfiguration configuration, IOrderService orderService)
         {
             _productService = productService;
             _orderService = orderService;
+            _viewRenderService = viewRenderService;
+            _configuration = configuration;
+            _emailSender = emailSender;
         }
         [Route("cart.html", Name = "Cart")]
         public IActionResult Index()
@@ -26,9 +38,18 @@ namespace WebsiteLaptop.Application.Controllers
         }
 
         [Route("checkout.html", Name = "Checkout")]
+        [HttpGet]
         public IActionResult Checkout()
         {
-            return View();
+            var model = new CheckoutViewModel();
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+            if (session.Any(x => x.ProductCondition == null))
+            {
+                return Redirect("/cart.html");
+            }
+
+            model.Carts = session;
+            return View(model);
         }
 
         #region AJAX Request
@@ -188,6 +209,65 @@ namespace WebsiteLaptop.Application.Controllers
         {
             var productConditions = _orderService.GetProductConditions();
             return new OkObjectResult(productConditions);
+        }
+
+        [Route("checkout.html", Name = "Checkout")]
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public async Task<IActionResult> Checkout(CheckoutViewModel model)
+        {
+            var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
+
+            if (ModelState.IsValid)
+            {
+                if (session != null)
+                {
+                    var details = new List<OrderDetailViewModel>();
+                    foreach (var item in session)
+                    {
+                        details.Add(new OrderDetailViewModel()
+                        {
+                            Product = item.Product,
+                            Price = item.Price,
+                            ProductConditionId=item.ProductCondition.Id,
+                            Quantity = item.Quantity,
+                            ProductId = item.Product.Id
+                        });
+                    }
+                    var orderViewModel = new OrderViewModel()
+                    {
+                        CustomerMobile = model.CustomerMobile,
+                        OrderStatus = OrderStatus.New,
+                        CustomerAddress = model.CustomerAddress,
+                        CustomerName = model.CustomerName,
+                        CustomerMessage = model.CustomerMessage,
+                        OrderDetails = details
+                    };
+                    if (User.Identity.IsAuthenticated == true)
+                    {
+                        orderViewModel.CustomerId = Guid.Parse(User.GetSpecificClaim("UserId"));
+                    }
+                    _orderService.Create(orderViewModel);
+                    try
+                    {
+
+                        _orderService.Save();
+
+                        //var content = await _viewRenderService.RenderToStringAsync("Cart/_OrderMail", orderViewModel);
+                        //Send mail
+                        //await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "New order from Panda Shop", content);
+                        ViewData["Success"] = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        ViewData["Success"] = false;
+                        ModelState.AddModelError("", ex.Message);
+                    }
+
+                }
+            }
+            model.Carts = session;
+            return View(model);
         }
         #endregion
     }

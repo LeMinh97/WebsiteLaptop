@@ -107,7 +107,7 @@
     }
 
     function getProductConditionOptions(selectedId) {
-        var productConditions = "<select class='form-control ddlProductConditionId'>";
+        var productConditions = "<select class='form-control ddlProductConditionId'><option value='0'></option>";
         $.each(cachedObj.productConditions, function (i, productCondition) {
             if (selectedId === productCondition.Id)
                 productConditions += '<option value="' + productCondition.Id + '" selected="select">' + productCondition.Name + '</option>';

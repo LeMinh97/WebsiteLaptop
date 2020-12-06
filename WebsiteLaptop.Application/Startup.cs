@@ -109,6 +109,7 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<ICommonService, CommonService>();
+            services.AddTransient<IViewRenderService, ViewRenderService>();
 
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
