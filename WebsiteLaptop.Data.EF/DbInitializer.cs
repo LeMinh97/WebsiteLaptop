@@ -138,6 +138,22 @@ namespace WebsiteLaptop.Data.EF
                 _context.Slides.AddRange(slides);
             }
 
+            if (!_context.Contacts.Any())
+            {
+                _context.Contacts.Add(new Contact()
+                {
+                    Id = CommonConstants.DefaultContactId,
+                    Address = "63, ngõ 117, Trần Cung, Bắc Từ Liêm",
+                    Email = "minhcrazy99@gmail.com",
+                    Name = "Website Laptop",
+                    Phone = "0942 324 543",
+                    Status = Status.Active,
+                    Website = "http://websitelaptop.com",
+                    Lat = 21.0521435,
+                    Lng = 105.7861743
+                });
+            }
+
             if (_context.ProductCategories.Count() == 0)
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()

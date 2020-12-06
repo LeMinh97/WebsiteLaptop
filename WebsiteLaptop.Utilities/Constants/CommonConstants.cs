@@ -12,6 +12,8 @@ namespace WebsiteLaptop.Utilities.Constants
             public const string AdminRole = "Admin";
         }
 
+        public const string DefaultContactId = "default";
+
         public const string CartSession = "CartSession";
         public class UserClaims
         {

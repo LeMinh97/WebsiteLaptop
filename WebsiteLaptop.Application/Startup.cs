@@ -98,7 +98,8 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
             services.AddTransient<IWholePriceRepository, WholePriceRepository>();
             services.AddTransient<ISlideRepository, SlideRepository>();
-
+            services.AddTransient<IFeedbackRepository, FeedbackRepository>();
+            services.AddTransient<IContactRepository, ContactRepository>();
             services.AddTransient<IFooterRepository, FooterRepository>();
 
             //Services
@@ -110,7 +111,8 @@ namespace WebsiteLaptop.Application
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<ICommonService, CommonService>();
             services.AddTransient<IViewRenderService, ViewRenderService>();
-
+            services.AddTransient<IFeedbackService, FeedbackService>();
+            services.AddTransient<IContactService, ContactService>();
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             services.AddControllersWithViews(options =>

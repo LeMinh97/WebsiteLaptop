@@ -27,6 +27,8 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
             CreateMap<Slide, SlideViewModel>().MaxDepth(2);
             CreateMap<Footer, FooterViewModel>().MaxDepth(2);
+            CreateMap<Feedback, FeedbackViewModel>().MaxDepth(2);
+            CreateMap<Contact, ContactViewModel>().MaxDepth(2);
         }
     }
 }

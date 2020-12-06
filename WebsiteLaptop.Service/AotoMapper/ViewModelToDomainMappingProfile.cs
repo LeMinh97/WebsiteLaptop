@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebsiteLaptop.Data.Entities;
+using WebsiteLaptop.Service.ViewModels.Common;
 using WebsiteLaptop.Service.ViewModels.Order;
 using WebsiteLaptop.Service.ViewModels.Product;
 using WebsiteLaptop.Service.ViewModels.System;
@@ -36,6 +37,12 @@ namespace WebsiteLaptop.Service.AotoMapper
             CreateMap<OrderDetailViewModel, OrderDetail>()
               .ConstructUsing(c => new OrderDetail(c.Id, c.OrderId, c.ProductId,
               c.Quantity, c.Price, c.ProductConditionId));
+
+            CreateMap<ContactViewModel, Contact>()
+                .ConstructUsing(c => new Contact(c.Id, c.Name, c.Phone, c.Email, c.Website, c.Address, c.Other, c.Lng, c.Lat, c.Status));
+
+            CreateMap<FeedbackViewModel, Feedback>()
+                .ConstructUsing(c => new Feedback(c.Id, c.Name, c.Email, c.Message, c.Status));
         }
     }
 }
