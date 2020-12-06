@@ -14,6 +14,6 @@ namespace WebsiteLaptop.Application.Models
 
         public decimal Price { set; get; }
 
-        public int ProductConditionId { get; set; }
+        public ProductConditionViewModel ProductCondition { get; set; }
     }
 }

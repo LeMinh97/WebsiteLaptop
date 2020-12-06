@@ -13,9 +13,11 @@ namespace WebsiteLaptop.Application.Controllers
     public class CartController : Controller
     {
         IProductService _productService;
-        public CartController(IProductService productService)
+        IOrderService _orderService;
+        public CartController(IProductService productService, IOrderService orderService)
         {
             _productService = productService;
+            _orderService = orderService;
         }
         [Route("cart.html", Name = "Cart")]
         public IActionResult Index()
@@ -91,7 +93,7 @@ namespace WebsiteLaptop.Application.Controllers
                     {
                         Product = product,
                         Quantity = quantity,
-                        ProductConditionId=productCondition,
+                        ProductCondition = _orderService.GetProductCondition(productCondition),
                         Price = product.PromotionPrice ?? product.Price
                     });
                     hasChanged = true;
@@ -111,7 +113,7 @@ namespace WebsiteLaptop.Application.Controllers
                 {
                     Product = product,
                     Quantity = quantity,
-                    ProductConditionId=productCondition,
+                    ProductCondition = _orderService.GetProductCondition(productCondition),
                     Price = product.PromotionPrice ?? product.Price
                 });
                 HttpContext.Session.Set(CommonConstants.CartSession, cart);
@@ -154,7 +156,7 @@ namespace WebsiteLaptop.Application.Controllers
         /// <param name="productId"></param>
         /// <param name="quantity"></param>
         /// <returns></returns>
-        public IActionResult UpdateCart(int productId, int quantity)
+        public IActionResult UpdateCart(int productId, int quantity, int productCondition)
         {
             var session = HttpContext.Session.Get<List<ShoppingCartViewModel>>(CommonConstants.CartSession);
             if (session != null)
@@ -167,6 +169,7 @@ namespace WebsiteLaptop.Application.Controllers
                         var product = _productService.GetById(productId);
                         item.Product = product;
                         item.Quantity = quantity;
+                        item.ProductCondition = _orderService.GetProductCondition(productCondition);
                         item.Price = product.PromotionPrice ?? product.Price;
                         hasChanged = true;
                     }
@@ -178,6 +181,13 @@ namespace WebsiteLaptop.Application.Controllers
                 return new OkObjectResult(productId);
             }
             return new EmptyResult();
+        }
+
+        [HttpGet]
+        public IActionResult GetProductConditions()
+        {
+            var productConditions = _orderService.GetProductConditions();
+            return new OkObjectResult(productConditions);
         }
         #endregion
     }

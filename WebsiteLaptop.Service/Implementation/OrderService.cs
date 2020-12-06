@@ -167,5 +167,10 @@ namespace WebsiteLaptop.Service.Implementation
            && x.OrderId == orderId && x.ProductConditionId == productConditionId);
             _orderDetailRepository.Remove(detail);
         }
+
+        public ProductConditionViewModel GetProductCondition(int id)
+        {
+            return _mapper.Map<ProductCondition, ProductConditionViewModel>(_productConditionRepository.FindById(id));
+        }
     }
 }

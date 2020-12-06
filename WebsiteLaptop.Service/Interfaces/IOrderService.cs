@@ -28,6 +28,8 @@ namespace WebsiteLaptop.Service.Interfaces
 
         List<ProductConditionViewModel> GetProductConditions();
 
+        ProductConditionViewModel GetProductCondition(int id);
+
         void Save();
     }
 }
