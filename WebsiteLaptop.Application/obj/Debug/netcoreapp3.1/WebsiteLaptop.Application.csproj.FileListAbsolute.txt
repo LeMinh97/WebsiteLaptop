@@ -581,3 +581,14 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Raz
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Cart\_OrderMail.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Contact\_ContactMail.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Checkout.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Cart\_OrderMail.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Contact\_ContactMail.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Catalog.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Details.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Product\Search.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\HeaderCart\Default.cshtml.g.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Pager\Default.cshtml.g.cs

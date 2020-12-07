@@ -16,6 +16,8 @@ namespace WebsiteLaptop.Data.Entities
         [Column(Order = 2)]
         public int ProductConditionId { get; set; }
 
+        public decimal ConditionPrice { get; set; }
+
         public int Quantity { get; set; }
 
         [ForeignKey("ProductId")]

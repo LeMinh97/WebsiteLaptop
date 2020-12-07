@@ -34,15 +34,27 @@ namespace WebsiteLaptop.Data.EF
                 });
                 await _roleManager.CreateAsync(new AppRole()
                 {
-                    Name = "Staff",
-                    NormalizedName = "Staff",
-                    Description = "Staff"
+                    Name = "Nhân Viên Bán Hàng",
+                    NormalizedName = "Nhân Viên Bán Hàng",
+                    Description = "Nhân Viên Bán Hàng"
                 });
                 await _roleManager.CreateAsync(new AppRole()
                 {
-                    Name = "Customer",
-                    NormalizedName = "Customer",
-                    Description = "Customer"
+                    Name = "Quản Lí",
+                    NormalizedName = "Quản Lí",
+                    Description = "Quản Lí"
+                });
+                await _roleManager.CreateAsync(new AppRole()
+                {
+                    Name = "Nhân Viên Giao Hàng",
+                    NormalizedName = "Nhân Viên Giao Hàng",
+                    Description = "Nhân Viên Giao Hàng"
+                });
+                await _roleManager.CreateAsync(new AppRole()
+                {
+                    Name = "Khách Hàng",
+                    NormalizedName = "Khách Hàng",
+                    Description = "Khách hàng"
                 });
             }
             if (!_userManager.Users.Any())
@@ -119,9 +131,9 @@ namespace WebsiteLaptop.Data.EF
             {
                 List<Slide> slides = new List<Slide>()
                 {
-                    new Slide() {Name="Slide 1",Image="/client-side/images/slider/slide-1.jpg",Url="#",DisplayOrder = 0,GroupAlias = "top",Status = true },
-                    new Slide() {Name="Slide 2",Image="/client-side/images/slider/slide-2.jpg",Url="#",DisplayOrder = 1,GroupAlias = "top",Status = true },
-                    new Slide() {Name="Slide 3",Image="/client-side/images/slider/slide-3.jpg",Url="#",DisplayOrder = 2,GroupAlias = "top",Status = true },
+                    new Slide() {Name="Slide 1",Image="/client-side/images/slider/asus-ad-1.png",Url="#",DisplayOrder = 0,GroupAlias = "top",Status = true },
+                    new Slide() {Name="Slide 2",Image="/client-side/images/slider/microsoft-mouse.jpg",Url="#",DisplayOrder = 1,GroupAlias = "top",Status = true },
+                    new Slide() {Name="Slide 3",Image="/client-side/images/slider/msi-ad-1.jpg",Url="#",DisplayOrder = 2,GroupAlias = "top",Status = true },
 
                     new Slide() {Name="Slide 1",Image="/client-side/images/brand1.png",Url="#",DisplayOrder = 1,GroupAlias = "brand",Status = true },
                     new Slide() {Name="Slide 2",Image="/client-side/images/brand2.png",Url="#",DisplayOrder = 2,GroupAlias = "brand",Status = true },
@@ -158,43 +170,55 @@ namespace WebsiteLaptop.Data.EF
             {
                 List<ProductCategory> listProductCategory = new List<ProductCategory>()
                 {
-                    new ProductCategory() { Name="Áo nam", Alias="ao-nam", ParentId = null,Status=Status.Active,SortOrder=1,
+                    new ProductCategory() { Name="Laptop", Alias="laptop", ParentId = null,Status=Status.Active,SortOrder=1,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 1",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-1" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 2",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-2" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 3",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-3" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 4",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-4" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 5",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-5" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "HP 15s fq1111TU",DateCreated=DateTime.Now,Image="/client-side/images/products/hp-15s-fq1111tu-i3-193r0pa-224012-224012-600x600.jpg",Alias="hp-15s-fq1111tu" ,Price = 10000000,Status = Status.Active,OriginalPrice = 11390000},
+                            new Product(){Name = "HP 348 G7",DateCreated=DateTime.Now,Image="/client-side/images/products/hp-348-g7-i3-1a0z1pa-1-225549-600x600.jpg",Alias="hp-348-g7" ,Price = 9800000,Status = Status.Active,OriginalPrice = 12190000},
+                            new Product(){Name = "Asus VivoBook A515EA",DateCreated=DateTime.Now,Image="/client-side/images/products/asus-vivobook-a515ea-i3-bq497t-062220-092221-600x600.jpg",Alias="asus-vivobook-a515ea" ,Price = 8690000,Status = Status.Active,OriginalPrice = 14690000},
+                            new Product(){Name = "Asus VivoBook X509MA N5030",DateCreated=DateTime.Now,Image="/client-side/images/products/asus-vivobook-x509ma-n5030-ej256t-171120-051158-600x600.jpg",Alias="asus-vivobook-x509ma-n5030" ,Price = 6700000,Status = Status.Active,OriginalPrice = 8890000},
+                            new Product(){Name = "Dell Vostro 3590",DateCreated=DateTime.Now,Image="/client-side/images/products/dell-vostro-3590-i7-grmgk2-220718-220718-600x600.jpg",Alias="dell-vostro-3590" ,Price = 15700000,Status = Status.Active,OriginalPrice = 20990000},
+                            new Product(){Name = "Lenovo IdeaPad S145 15IIL",DateCreated=DateTime.Now,Image="/client-side/images/products/lenovo-ideapad-s145-81w8001xvn-a4-216292-600x600.jpg",Alias="lenovo-ideapad-s145-15iil" ,Price = 10990000,Status = Status.Active,OriginalPrice = 10990000},
+                            new Product(){Name = "Asus VivoBook X509JA",DateCreated=DateTime.Now,Image="/client-side/images/products/asus-vivobook-x509ja-i3-ej480t-225608-600x600.jpg",Alias="asus-vivobook-x509ja" ,Price = 7900000,Status = Status.Active,OriginalPrice = 10890000},
+                            new Product(){Name = "Lenovo IdeaPad C340 14IML",DateCreated=DateTime.Now,Image="/client-side/images/products/lenovo-ideapad-c340-14iml-i3-10110u-8gb-512gb-touc-5-213524-600x600.jpg",Alias="lenovo-ideapad-c340-14iml" ,Price = 12000000,Status = Status.Active,OriginalPrice = 16290000},
+                            new Product(){Name = "Asus VivoBook A415EA",DateCreated=DateTime.Now,Image="/client-side/images/products/asus-vivobook-a415ea-i3-eb317t-062420-092402-600x600.jpg",Alias="asus-vivobook-a415ea" ,Price = 10500000,Status = Status.Active,OriginalPrice = 13690000},
+                            new Product(){Name = "HP 15s du1076TX",DateCreated=DateTime.Now,Image="/client-side/images/products/hp-15s-du1076tx-i5-8gb-10210u-512gb-2gb-mx130-win1-600x600.jpg",Alias="hp-15s-du1076tx" ,Price = 15100000,Status = Status.Active,OriginalPrice = 17490000},
+                            new Product(){Name = "Dell Inspiron 3493",DateCreated=DateTime.Now,Image="/client-side/images/products/dell-inspiron-3493-i5-n4i5122w-222088-600x600.jpg",Alias="dell-inspiron-3493" ,Price = 14600000,Status = Status.Active,OriginalPrice = 15290000},
+                            new Product(){Name = "Asus VivoBook A415EA",DateCreated=DateTime.Now,Image="/client-side/images/products/asus-vivobook-a415ea-i3-eb353t-062320-092323-600x600.jpg",Alias="asus-vivobook-a415ea" ,Price = 13500000,Status = Status.Active,OriginalPrice = 14190000},
                         }
                     },
-                    new ProductCategory() { Name="Áo nữ",Alias="ao-nu",ParentId = null,Status=Status.Active ,SortOrder=2,
+                    new ProductCategory() { Name="PC văn phòng",Alias="pc-van-phong",ParentId = null,Status=Status.Active ,SortOrder=2,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 6",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-6" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 7",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-7" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 8",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-8" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 9",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-9" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 10",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-10" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "PC Acer Aspire XC-830",DateCreated=DateTime.Now,Image="/client-side/images/products/51932_acer_aspire_xc_830_s__2_.jpg",Alias="pc-acer-aspire-xc-830" ,Price = 5490000,Status = Status.Active,OriginalPrice = 6499000},
+                            new Product(){Name = "PC Asus S340MC",DateCreated=DateTime.Now,Image="/client-side/images/products/47741_pc_asus_s340mc___2_.jpg",Alias="pc-asus-s340mc" ,Price = 6990000,Status = Status.Active,OriginalPrice = 7890000},
+                            new Product(){Name = "PC Lenovo V530S-07ICB",DateCreated=DateTime.Now,Image="/client-side/images/products/44477_lenovo_v530s_023.png",Alias="pc-lenovo-v530s-07icb" ,Price = 8999000,Status = Status.Active,OriginalPrice = 9690000},
+                            new Product(){Name = "PC HP 280 G3 SFF",DateCreated=DateTime.Now,Image="/client-side/images/products/51086_pc_hp_280_g3_sff_a__2_.jpg",Alias="pc-hp-280-g3-sff" ,Price = 8990000,Status = Status.Active,OriginalPrice = 9450000},
+                            new Product(){Name = "PC Dell OptiPlex 3070",DateCreated=DateTime.Now,Image="/client-side/images/products/48226_dell_optiplex_3070_mt_021.png",Alias="pc-dell-optiplex-3070" ,Price = 11890000,Status = Status.Active,OriginalPrice = 12990000},
                         }},
-                    new ProductCategory() { Name="Giày nam",Alias="giay-nam", ParentId = null,Status=Status.Active ,SortOrder=3,
+                    new ProductCategory() { Name="Bàn Phím & Chuột",Alias="ban-phim-chuot", ParentId = null,Status=Status.Active ,SortOrder=3,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 11",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-11" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 12",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-12" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 13",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-13" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 14",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-14" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 15",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-15" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
+                            new Product(){Name = "Bàn phím Asus TUF K5",DateCreated=DateTime.Now,Image="/client-side/images/products/55028_ban_phim_choi_game_asus_tuf_k5_usb_rgb_den_0004_5.jpg",Alias="ban-phim-asus-tuf-k5" ,Price = 989000,Status = Status.Active,OriginalPrice = 1299000},
+                            new Product(){Name = "Chuột Asus ROG Gladius II Core",DateCreated=DateTime.Now,Image="/client-side/images/products/53593_asus_rog_gladius_ii_core__p507_.jpg",Alias="chuot-asus-rog-gladius-ii-core" ,Price = 1089000,Status = Status.Active,OriginalPrice = 1299999},
+                            new Product(){Name = "Chuột Logitech M325 Wireless",DateCreated=DateTime.Now,Image="/client-side/images/products/6075_chuot_logitech_m325_wireless_0001_2.jpg",Alias="chuot-logitech-m325-wireless" ,Price = 379000,Status = Status.Active,OriginalPrice = 799000},
+                            new Product(){Name = "Bàn phím Logitech K120",DateCreated=DateTime.Now,Image="/client-side/images/products/6044_ban_phim_logitech_k120_0002_1.jpg",Alias="ban-phim-logitech-k120" ,Price = 150000,Status = Status.Active,OriginalPrice = 229000},
+                            new Product(){Name = "Chuột Logitech M185 Wireless",DateCreated=DateTime.Now,Image="/client-side/images/6988_chu___t_logitech_m185_wireless.jpg",Alias="chuot-logitech-m185-wireless" ,Price = 249000,Status = Status.Active,OriginalPrice = 249000},
                         }},
-                    new ProductCategory() { Name="Giày nữ",Alias="giay-nu", ParentId = null,Status=Status.Active,SortOrder=4,
+                    new ProductCategory() { Name="Màn Hình",Alias="man-hinh", ParentId = null,Status=Status.Active,SortOrder=4,
                         Products = new List<Product>()
                         {
-                            new Product(){Name = "Sản phẩm 16",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-16" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 17",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-17" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 18",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-18" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 19",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-19" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                            new Product(){Name = "Sản phẩm 20",DateCreated=DateTime.Now,Image="/client-side/images/products/product-1.jpg",Alias="san-pham-20" ,Price = 1000,Status = Status.Active,OriginalPrice = 1000},
-                        }}
+                            new Product(){Name = "Màn hình Asus VA24DQLB",DateCreated=DateTime.Now,Image="/client-side/images/products/54655_vg24dqlb__9_.png",Alias="man-hinh-asus-va24dqlb" ,Price = 3689000,Status = Status.Active,OriginalPrice = 42779000},
+                            new Product(){Name = "Màn hình Samsung C27F390FH",DateCreated=DateTime.Now,Image="/client-side/images/products/33517_samsung_c27f390fh__4_.png",Alias="man-hinh-samsung-c27f390fh" ,Price = 4489000,Status = Status.Active,OriginalPrice = 4999000},
+                            new Product(){Name = "Màn hình Acer HA220QA",DateCreated=DateTime.Now,Image="/client-side/images/products/49378__ha220q__1_.jpg",Alias="man-hinh-acer-ha220qa" ,Price = 3069000,Status = Status.Active,OriginalPrice = 3430000},
+                            new Product(){Name = "Màn hình Dell E2020H",DateCreated=DateTime.Now,Image="/client-side/images/products/52974_e2020h__7_.jpg",Alias="man-hinh-dell-e2020h" ,Price = 2189000,Status = Status.Active,OriginalPrice = 2499000},
+                        }},
+                    new ProductCategory() { Name="Thiết Bị Văn Phòng",Alias="thiet-bi-van-phong", ParentId = null,Status=Status.Active,SortOrder=5 },
+                    new ProductCategory() { Name="Linh Kiện Máy Tính",Alias="linh-kien-may-tinh", ParentId = null,Status=Status.Active,SortOrder=6 },
+                    new ProductCategory() { Name="Camera An Ninh",Alias="camera-an-ninh", ParentId = null,Status=Status.Active,SortOrder=7 },
+                    new ProductCategory() { Name="Thiết Bị Mạng",Alias="thiet-bi-mang", ParentId = null,Status=Status.Active,SortOrder=8 },
+                    new ProductCategory() { Name="USB,Thẻ Nhớ",Alias="usb-the-nho", ParentId = null,Status=Status.Active,SortOrder=9 },
+                    new ProductCategory() { Name="Phụ Kiện Khác",Alias="khac", ParentId = null,Status=Status.Active,SortOrder=10 },
                 };
                 _context.ProductCategories.AddRange(listProductCategory);
             }

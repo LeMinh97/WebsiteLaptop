@@ -129,8 +129,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                 name: "ContactDetails",
                 columns: table => new
                 {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(maxLength: 250, nullable: false),
                     Phone = table.Column<string>(maxLength: 50, nullable: true),
                     Email = table.Column<string>(maxLength: 250, nullable: true),
@@ -527,6 +526,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductId = table.Column<int>(nullable: false),
                     ProductConditionId = table.Column<int>(nullable: false),
+                    ConditionPrice = table.Column<decimal>(nullable: false),
                     Quantity = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

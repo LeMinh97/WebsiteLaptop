@@ -10,7 +10,7 @@ using WebsiteLaptop.Data.EF;
 namespace WebsiteLaptop.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201204103850_initial")]
+    [Migration("20201207040048_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -309,10 +309,8 @@ namespace WebsiteLaptop.Data.EF.Migrations
 
             modelBuilder.Entity("WebsiteLaptop.Data.Entities.Contact", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(250)")
@@ -815,6 +813,9 @@ namespace WebsiteLaptop.Data.EF.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<decimal>("ConditionPrice")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ProductConditionId")
                         .HasColumnType("int");
