@@ -1,6 +1,6 @@
 ﻿@model ContactPageViewModel
 @{
-    ViewData["Title"] = "Contact";
+    ViewData["Title"] = "Liên hệ";
 }
 @section Scripts{
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj0IcG4hF-2EVKae9WVnVaGqM6JBjUfrY">
@@ -21,8 +21,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="index.html">Home</a><span>&raquo;</span></li>
-                    <li><strong>Contact Us</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="index.html">Trang chủ</a><span>&raquo;</span></li>
+                    <li><strong>Liên hệ</strong></li>
                 </ul>
             </div>
         </div>
@@ -36,19 +36,19 @@
             <section class="col-main col-sm-12">
                 <div id="contact" class="page-content page-contact">
                     <div class="page-title">
-                        <h2>Contact Us</h2>
+                        <h2>Liên hệ với chúng tôi</h2>
                     </div>
-                    <div id="message-box-conact">We're available for new projects</div>
+                    @*<div id="message-box-conact">We're available for new projects</div>*@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6" id="contact_form_map">
-                            <h3 class="page-subheading">Let's get in touch</h3>
-                            <p>Lorem ipsum dolor sit amet onsectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor dapibus eget. Mauris tincidunt aliquam lectus sed vestibulum. Vestibulum bibendum suscipit mattis.</p>
-                            <br />
-                            <ul>
-                                <li><i class="fa fa-circle"></i> Praesent nec tincidunt turpis.</li>
-                                <li><i class="fa fa-circle"></i> Aliquam et nisi risus.&nbsp;Cras ut varius ante.</li>
-                                <li><i class="fa fa-circle"></i> Ut congue gravida dolor, vitae viverra dolor.</li>
-                            </ul>
+                            <h3 class="page-subheading">Hãy giữ liên lạc</h3>
+                            @*<p>Lorem ipsum dolor sit amet onsectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor dapibus eget. Mauris tincidunt aliquam lectus sed vestibulum. Vestibulum bibendum suscipit mattis.</p>*@
+                            @*<br />
+                                <ul>
+                                    <li><i class="fa fa-circle"></i> Praesent nec tincidunt turpis.</li>
+                                    <li><i class="fa fa-circle"></i> Aliquam et nisi risus.&nbsp;Cras ut varius ante.</li>
+                                    <li><i class="fa fa-circle"></i> Ut congue gravida dolor, vitae viverra dolor.</li>
+                                </ul>*@
                             <br />
                             <ul class="store_info">
                                 <li><i class="fa fa-home"></i>@Model.Contact.Address</li>
@@ -63,14 +63,14 @@
                                 if ((bool)ViewData["Success"] == true)
                                 {
                                     <div class="alert alert-success">
-                                        Thank you for your feedback. We are going to reply your order soon.
+                                        Cảm ơn phản hồi của bạn. Chúng tôi sẽ sớm trả lời bạn trong thời gian tới.
                                     </div>
 
                                 }
                                 else
                                 {
                                     <div class="alert alert-danger">
-                                        Have an error in send feedback progress. Please contact to administrator.
+                                        Có lỗi trong quá trình gửi phản hồi. Vui lòng liên hệ với quản trị viên.
                                     </div>
 
                                 }
@@ -81,12 +81,12 @@
                             {
                                 <div id="map" style="width:100%;height:500px;"></div>
                                 <form action="/contact.html" method="post">
-                                    <h3 class="page-subheading">Make an enquiry</h3>
+                                    <h3 class="page-subheading">Tạo một phản hồi</h3>
                                     <div asp-validation-summary="All" class="text-danger"></div>
                                     @Html.AntiForgeryToken()
                                     <div class="contact-form-box">
                                         <div class="form-selector">
-                                            <label>Name</label>
+                                            <label>Tên</label>
                                             <input type="text" class="form-control input-sm" asp-for="Feedback.Name" />
                                         </div>
                                         <div class="form-selector">
@@ -94,12 +94,12 @@
                                             <input type="text" class="form-control input-sm" asp-for="Feedback.Email" />
                                         </div>
                                         <div class="form-selector">
-                                            <label>Message</label>
+                                            <label>Tin nhắn</label>
                                             <textarea class="form-control input-sm" rows="10" asp-for="Feedback.Message"></textarea>
                                         </div>
                                         <div class="form-selector">
-                                            <button type="submit" class="button"><i class="icon-paper-plane icons"></i>&nbsp; <span>Send Message</span></button>
-                                            &nbsp; <a href="#" class="button">Clear</a>
+                                            <button type="submit" class="button"><i class="icon-paper-plane icons"></i>&nbsp; <span>Gửi tin nhắn</span></button>
+                                            &nbsp; <a href="#" class="button">Xóa</a>
                                         </div>
                                     </div>
                                 </form>

@@ -172,7 +172,7 @@ namespace WebsiteLaptop.Application.Controllers
 
             await _signInManager.SignInAsync(user, isPersistent: false);
             _logger.LogInformation("User changed their password successfully.");
-            StatusMessage = "Your password has been changed.";
+            StatusMessage = "Mật khẩu của bạn đã được thay đổi.";
 
             return RedirectToAction(nameof(ChangePassword));
         }
@@ -220,7 +220,7 @@ namespace WebsiteLaptop.Application.Controllers
             }
 
             await _signInManager.SignInAsync(user, isPersistent: false);
-            StatusMessage = "Your password has been set.";
+            StatusMessage = "Mật khẩu của bạn đã được thiết lập.";
 
             return RedirectToAction(nameof(SetPassword));
         }
@@ -495,7 +495,7 @@ namespace WebsiteLaptop.Application.Controllers
         {
             return string.Format(
                 AuthenicatorUriFormat,
-                _urlEncoder.Encode("TeduCoreApp"),
+                _urlEncoder.Encode("WebsiteLaptop.Application"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

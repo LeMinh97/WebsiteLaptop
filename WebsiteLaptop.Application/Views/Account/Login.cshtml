@@ -3,7 +3,7 @@
 @inject SignInManager<AppUser> SignInManager
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Đăng nhập";
 }
 <!-- Breadcrumbs -->
 
@@ -12,8 +12,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <ul>
-                    <li class="home"> <a title="Go to Home Page" href="/">Home</a><span>&raquo;</span></li>
-                    <li><strong>My Account</strong></li>
+                    <li class="home"> <a title="Go to Home Page" href="/">Trang chủ</a><span>&raquo;</span></li>
+                    <li><strong>Đăng nhập</strong></li>
                 </ul>
             </div>
         </div>
@@ -27,25 +27,24 @@
             <div class="account-login">
                 <div class="box-authentication">
                     <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post">
-                        <h4>Login</h4>
+                        <h4>Đăng nhập</h4>
                         <div asp-validation-summary="All" class="text-danger"></div>
-                        <p class="before-login-text">Welcome back! Sign in to your account</p>
-                        <label for="emmail_login">Email address<span class="required">*</span></label>
+                        <p class="before-login-text">Chào mừng trở lại! đăng nhập vào tài khoản của bạn</p>
+                        <label for="emmail_login">Email<span class="required">*</span></label>
                         <input type="text" asp-for="Email" class="form-control">
-                        <label for="password_login">Password<span class="required">*</span></label>
+                        <label for="password_login">Mật khẩu<span class="required">*</span></label>
                         <input id="password_login" asp-for="Password" type="password" class="form-control">
-                        <p class="forgot-pass"><a asp-action="ForgotPassword">Lost your password?</a></p>
-                        <button type="submit" class="button">
-                            <i class="icon-lock icons"></i>&nbsp; <span>Login</span>
-                        </button>
                         <label class="inline" asp-for="RememberMe">
-
                             <input asp-for="RememberMe" />
-                            Remember me
+                            Nhớ tôi
                         </label>
+                        <p class="forgot-pass"><a asp-action="ForgotPassword">Quên mật khẩu?</a></p>
+                        <button type="submit" class="button">
+                            <i class="icon-lock icons"></i>&nbsp; <span>Đăng nhập</span>
+                        </button>
                     </form>
 
-                    <section>
+                    @*<section>
                         <h4>Use another service to log in.</h4>
                         <hr />
                         @{
@@ -73,19 +72,19 @@
                                 </form>
                             }
                         }
-                    </section>
+                    </section>*@
                 </div>
                 <div class="box-authentication">
-                    <h4>Register</h4>
-                    <p>Create your very own account</p>
+                    <h4>Đăng kí</h4>
+                    <p style="margin:0;">Tạo tài khoản của riêng bạn</p>
 
-                    <button onclick="window.location.href='/register.html'" class="button"><i class="icon-user icons"></i>&nbsp; <span>Register</span></button>
+                    <button onclick="window.location.href='/register.html'" class="button"><i class="icon-user icons"></i>&nbsp; <span>Đăng kí</span></button>
                     <div class="register-benefits">
-                        <h5>Sign up today and you will be able to :</h5>
+                        <h5>Đăng ký ngay hôm nay và bạn sẽ có thể :</h5>
                         <ul>
-                            <li>Speed your way through checkout</li>
-                            <li>Track your orders easily</li>
-                            <li>Keep a record of all your purchases</li>
+                            <li>Thanh toán nhanh và dễ dàng hơn</li>
+                            <li>Theo dõi đơn đặt hàng của bạn một cách dễ dàng</li>
+                            <li>Ghi lại tất cả các giao dịch của bạn</li>
                         </ul>
                     </div>
                 </div>

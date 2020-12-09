@@ -50,7 +50,7 @@ namespace WebsiteLaptop.Application.Controllers
                 _feedbackService.Add(model.Feedback);
                 _feedbackService.SaveChanges();
                 var content = await _viewRenderService.RenderToStringAsync("Contact/_ContactMail", model.Feedback);
-                await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "Have new contact feedback", content);
+                await _emailSender.SendEmailAsync(_configuration["MailSettings:AdminMail"], "Có phản hồi mới", content);
                 ViewData["Success"] = true;
             }
 

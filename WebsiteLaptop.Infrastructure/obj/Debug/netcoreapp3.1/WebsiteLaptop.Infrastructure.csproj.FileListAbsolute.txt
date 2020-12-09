@@ -6,15 +6,6 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.deps.json
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.csprojAssemblyReference.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfoInputs.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfo.cs
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.csproj.CoreCompileInputs.cache
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
-E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.deps.json
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
@@ -24,3 +15,12 @@ E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfo.cs
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
 E:\Code KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.deps.json
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\bin\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.csprojAssemblyReference.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfoInputs.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.AssemblyInfo.cs
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.csproj.CoreCompileInputs.cache
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.dll
+E:\KLTN\WebsiteLaptop\WebsiteLaptop.Infrastructure\obj\Debug\netcoreapp3.1\WebsiteLaptop.Infrastructure.pdb

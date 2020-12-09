@@ -51,9 +51,9 @@
                         <div class="hover_content">
                             <div class="hover_data">
                                 <div class="title"> Big Sale </div>
-                                <div class="desc-text">Up to 55% off</div>
-                                <span>Camera, Laptop & Mobile</span>
-                                <p><a href="#" class="shop-now">Get it now!</a></p>
+                                <div class="desc-text">Lên tới 25%</div>
+                                <span>Camera, Laptop & PC</span>
+                                <p><a href="#" class="shop-now">Tham gia!</a></p>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                 <div class="jtv-best-sale-list">
                     <div class="wpb_wrapper">
                         <div class="best-title text-left">
-                            <h2>Special Offers</h2>
+                            <h2>Ưu đãi đặc biệt</h2>
                         </div>
                     </div>
                     <div class="slider-items-products">
@@ -75,7 +75,7 @@
                                     <div class="product-item">
                                         <div class="item-inner">
                                             <div class="product-thumbnail">
-                                                <div class="icon-new-label new-left">New</div>
+                                                @*<div class="icon-new-label new-left">New</div>*@
                                                 <div class="pr-img-area">
                                                     <a title="@item.Name" href="/@item.Alias-p.@(item.Id).html">
                                                         <figure>
@@ -84,13 +84,13 @@
                                                         </figure>
                                                     </a>
                                                 </div>
-                                                <div class="pr-info-area">
+                                                @*<div class="pr-info-area">
                                                     <div class="pr-button">
                                                         <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
                                                         <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
                                                         <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
                                                     </div>
-                                                </div>
+                                                </div>*@
                                             </div>
                                             <div class="item-info">
                                                 <div class="info-inner">
@@ -101,7 +101,7 @@
                                                             <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
                                                         </div>
                                                         <div class="pro-action">
-                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><span> Purchase</span> </button>
+                                                            <button type="button" class="add-to-cart" data-id="@item.Id"><span> Thêm vào giỏ</span> </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -123,7 +123,7 @@
 <div class="container">
     <div class="home-tab">
         <div class="tab-title text-left">
-            <h2>Best selling</h2>
+            <h2>Sản phẩm</h2>
             <ul class="nav home-nav-tabs home-product-tabs">
                 @for (var i = 0; i < Model.HomeCategories.Count; i++)
                 {
@@ -205,12 +205,13 @@
         </div>
     </div>
 </div>
-<div class="featured-products">
+
+<!--<div class="featured-products">
     <div class="container">
-        <div class="row">
+        <div class="row">-->
 
             <!-- Best Sale -->
-            <div class="col-sm-12 col-md-4 jtv-best-sale">
+            <!--<div class="col-sm-12 col-md-4 jtv-best-sale">
                 <div class="jtv-best-sale-list">
                     <div class="wpb_wrapper">
                         <div class="best-title text-left">
@@ -359,9 +360,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
             <!-- Banner -->
-            <div class="col-md-4 top-banner hidden-sm">
+            <!--<div class="col-md-4 top-banner hidden-sm">
                 <div class="jtv-banner3">
                     <div class="jtv-banner3-inner">
                         <a href="#"><img src="/client-side/images/sub1a.jpg" alt="HTML template"></a>
@@ -534,7 +535,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 
 <!-- Blog -->
 @*<section class="blog-post-wrapper">
@@ -572,7 +573,7 @@
 </section>*@
 
 <!-- our clients Slider -->
-@Component.InvokeAsync("Brand")
+@await Component.InvokeAsync("Brand")
 <!-- BANNER-AREA-START -->
 <section class="banner-area">
     <div class="container">

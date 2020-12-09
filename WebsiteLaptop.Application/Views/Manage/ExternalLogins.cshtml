@@ -1,6 +1,6 @@
 ﻿@model WebsiteLaptop.Application.Models.ManageViewModels.ExternalLoginsViewModel
 @{
-    ViewData["Title"] = "Manage your external logins";
+    ViewData["Title"] = "Quản lý thông tin đăng nhập bên ngoài của bạn";
     ViewData.AddActivePage(ManageNavPages.ExternalLogins);
 }
 
@@ -21,7 +21,7 @@
                                 <div>
                                     <input asp-for="@login.LoginProvider" name="LoginProvider" type="hidden" />
                                     <input asp-for="@login.ProviderKey" name="ProviderKey" type="hidden" />
-                                    <button type="submit" class="btn btn-default" title="Remove this @login.LoginProvider login from your account">Remove</button>
+                                    <button type="submit" class="btn btn-default" title="Xóa thông tin đăng nhập này @login.LoginProvider khỏi tài khoản của bạn">Xóa</button>
                                 </div>
                             </form>
                         }
@@ -37,14 +37,14 @@
 }
 @if (Model.OtherLogins?.Count > 0)
 {
-    <h4>Add another service to log in.</h4>
+    <h4>Thêm một dịch vụ khác để đăng nhập.</h4>
     <hr />
     <form asp-action="LinkLogin" method="post" class="form-horizontal">
         <div id="socialLoginList">
             <p>
                 @foreach (var provider in Model.OtherLogins)
                 {
-                    <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                    <button type="submit" class="btn btn-default" name="provider" value="@provider.Name" title="Đăng nhập bằng tài khoản @provider.DisplayName của bạn">@provider.DisplayName</button>
                 }
             </p>
         </div>

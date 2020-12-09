@@ -1,32 +1,32 @@
 ﻿@model WebsiteLaptop.Service.ViewModels.Order.OrderViewModel
-<h1>Panda Shop new order</h1>
+<h1>Đơn hàng mới</h1>
 <table>
     <tr>
-        <td>Customer Name</td>
+        <td>Tên khách hàng</td>
         <td>@Model.CustomerName</td>
     </tr>
     <tr>
-        <td>Address</td>
+        <td>Địa chỉ</td>
         <td>@Model.CustomerAddress</td>
     </tr>
     <tr>
-        <td>Phone</td>
+        <td>Số điện thoại</td>
         <td>@Model.CustomerMobile</td>
     </tr>
     <tr>
-        <td>Date</td>
+        <td>Ngày tạo</td>
         <td>@Model.DateCreated.ToString("dd/MM/yyyy hh:mm")</td>
     </tr>
     <tr>
-        <td>Details</td>
+        <td>Chi tiết</td>
         <td>
             <table>
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Tổng tiền</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,7 +43,7 @@
                 <tfoot>
                     <tr>
                         <td colspan="5">
-                            Total: @Model.OrderDetails.Sum(x => x.Quantity * x.Price).ToString("N0")
+                            Tổng tiền: @Model.OrderDetails.Sum(x => x.Quantity * x.Price).ToString("N0")
                         </td>
                     </tr>
                 </tfoot>

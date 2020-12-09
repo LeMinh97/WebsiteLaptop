@@ -40,14 +40,14 @@ namespace WebsiteLaptop.Application.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Trang mô tả ứng dụng của bạn.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Trang liên hệ của bạn.";
 
             return View();
         }
