@@ -20,9 +20,12 @@ namespace WebsiteLaptop.Application.Models.ProductViewModels
 
         public List<SelectListItem> SortTypes { get; } = new List<SelectListItem>
         {
-            new SelectListItem(){Value = "lastest",Text = "Lastest"},
-            new SelectListItem(){Value = "price",Text = "Price"},
-            new SelectListItem(){Value = "name",Text = "Name"},
+            new SelectListItem(){Value = "latest",Text = "Mới nhất"},
+            new SelectListItem(){Value = "oldest",Text = "Cũ nhất"},
+            new SelectListItem(){Value = "price-asc",Text = "Giá tăng"},
+            new SelectListItem(){Value = "price-desc",Text = "Giá giảm"},
+            new SelectListItem(){Value = "name-asc",Text = "Tên tăng"},
+            new SelectListItem(){Value = "name-desc",Text = "Tên giảm"},
         };
 
         public List<SelectListItem> PageSizes { get; } = new List<SelectListItem>

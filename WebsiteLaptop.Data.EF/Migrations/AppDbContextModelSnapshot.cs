@@ -653,7 +653,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     b.Property<string>("GPU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Harđrive")
+                    b.Property<string>("HardDrive")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("HomeFlag")

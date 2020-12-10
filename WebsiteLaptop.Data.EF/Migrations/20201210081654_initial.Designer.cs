@@ -10,7 +10,7 @@ using WebsiteLaptop.Data.EF;
 namespace WebsiteLaptop.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201207040048_initial")]
+    [Migration("20201210081654_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -655,7 +655,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     b.Property<string>("GPU")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Harđrive")
+                    b.Property<string>("HardDrive")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("HomeFlag")

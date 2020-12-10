@@ -92,7 +92,7 @@ namespace WebsiteLaptop.Data.Entities
         public string Unit { get; set; }
         public string CPU { get; set; }
         public string RAM { get; set; }
-        public string Harđrive { get; set; }
+        public string HardDrive { get; set; }
         public string Screen { get; set; }
         public string GPU { get; set; }
         public string Pin { get; set; }

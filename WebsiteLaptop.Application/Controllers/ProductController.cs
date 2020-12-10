@@ -25,7 +25,7 @@ namespace WebsiteLaptop.Application.Controllers
             _orderService = orderService;
         }
 
-        [Route("products.html")]
+        [Route("categories.html")]
         public IActionResult Index()
         {
             var categories = _productCategoryService.GetAll();
@@ -78,6 +78,21 @@ namespace WebsiteLaptop.Application.Controllers
             catalog.SortType = sortBy;
             catalog.Data = _productService.GetAllPaging(null, keyword, page, pageSize.Value);
             catalog.Keyword = keyword;
+
+            return View(catalog);
+        }
+
+        [Route("products.html")]
+        public IActionResult AllProducts( int? pageSize, string sortBy, int page = 1)
+        {
+            var catalog = new CatalogViewModel();
+            ViewData["BodyClass"] = "shop_grid_full_width_page";
+            if (pageSize == null)
+                pageSize = _configuration.GetValue<int>("PageSize");
+
+            catalog.PageSize = pageSize;
+            catalog.SortType = sortBy;
+            catalog.Data = _productService.GetAllPaging( null, string.Empty, page, pageSize.Value);
 
             return View(catalog);
         }

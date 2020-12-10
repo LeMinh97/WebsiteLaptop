@@ -367,7 +367,7 @@ namespace WebsiteLaptop.Data.EF.Migrations
                     Unit = table.Column<string>(maxLength: 255, nullable: true),
                     CPU = table.Column<string>(nullable: true),
                     RAM = table.Column<string>(nullable: true),
-                    Harđrive = table.Column<string>(nullable: true),
+                    HardDrive = table.Column<string>(nullable: true),
                     Screen = table.Column<string>(nullable: true),
                     GPU = table.Column<string>(nullable: true),
                     Pin = table.Column<string>(nullable: true),
