@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Tắt xác thực hai yếu tố (2FA)";
+    ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="alert alert-warning" role="alert">
+    <p>
+        <span class="glyphicon glyphicon-warning-sign"></span>
+        <strong>Hành động này chỉ vô hiệu hóa 2FA.</strong>
+    </p>
+    <p>
+        Vô hiệu hóa 2FA không thay đổi các khóa được sử dụng trong ứng dụng xác thực. Nếu bạn muốn thay đổi chìa khóa
+        được sử dụng trong một ứng dụng xác thực mà bạn nên <a asp-action="ResetAuthenticatorWarning">đặt lại các khóa xác thực của bạn.</a>
+    </p>
+</div>
+
+<div>
+    <form asp-action="Disable2fa" method="post" class="form-group">
+        <button class="btn btn-danger" type="submit">Tắt 2FA</button>
+    </form>
+</div>

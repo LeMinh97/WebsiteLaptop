@@ -1,0 +1,49 @@
+﻿@model WebsiteLaptop.Application.Models.ManageViewModels.TwoFactorAuthenticationViewModel
+@{
+    ViewData["Title"] = "Xác thực hai yếu tố";
+    ViewData.AddActivePage(ManageNavPages.TwoFactorAuthentication);
+}
+
+<h4>@ViewData["Title"]</h4>
+@if (Model.Is2faEnabled)
+{
+    if (Model.RecoveryCodesLeft == 0)
+    {
+        <div class="alert alert-danger">
+            <strong>Bạn không còn mã khôi phục.</strong>
+            <p>Bạn phải <a asp-action="GenerateRecoveryCodes">tạo một bộ mã khôi phục mới</a> trước khi có thể đăng nhập bằng mã khôi phục.</p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft == 1)
+    {
+        <div class="alert alert-danger">
+            <strong>Bạn còn lại 1 mã khôi phục.</strong>
+            <p>Bạn có thể <a asp-action="GenerateRecoveryCodes">tạo một bộ mã khôi phục mới</a>.</p>
+        </div>
+    }
+    else if (Model.RecoveryCodesLeft <= 3)
+    {
+        <div class="alert alert-warning">
+            <strong>Bạn còn lại mã khôi phục @Model.RecoveryCodesLeft.</strong>
+            <p>Bạn nên <a asp-action="GenerateRecoveryCodes">tạo một bộ mã khôi phục mới</a>.</p>
+        </div>
+    }
+
+<a asp-action="Disable2faWarning" class="btn btn-default">Tắt 2FA</a>
+<a asp-action="GenerateRecoveryCodes" class="btn btn-default">Đặt lại mã khôi phục</a>
+}
+
+<h5>Xác thực ứng dụng</h5>
+@if (!Model.HasAuthenticator)
+{
+<a asp-action="EnableAuthenticator" class="btn btn-default">Thêm xác thực ứng dụng</a>
+}
+else
+{
+<a asp-action="EnableAuthenticator" class="btn btn-default">Cấu hình xác thực ứng dụng</a>
+<a asp-action="ResetAuthenticatorWarning" class="btn btn-default">Đặt lại khóa xác thực</a>
+}
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

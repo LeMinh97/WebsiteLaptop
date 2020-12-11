@@ -6,6 +6,6 @@ namespace WebsiteLaptop.Data.Interfaces
 {
     public interface ISortable
     {
-        int SorOrder { set; get; }
+        int SortOrder { set; get; }
     }
 }
