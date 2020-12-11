@@ -410,7 +410,7 @@ namespace WebsiteLaptop.Application.Controllers
 
             if (!is2faTokenValid)
             {
-                ModelState.AddModelError("model.Code", "Verification code is invalid.");
+                ModelState.AddModelError("model.Code", "Mã xác minh không hợp lệ.");
                 return View(model);
             }
 

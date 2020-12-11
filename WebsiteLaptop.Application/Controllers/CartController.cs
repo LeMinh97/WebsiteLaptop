@@ -261,7 +261,7 @@ namespace WebsiteLaptop.Application.Controllers
                     catch (Exception ex)
                     {
                         ViewData["Success"] = false;
-                        ModelState.AddModelError("", ex.Message);
+                        ModelState.AddModelError("Thanh toán đang bị lỗi", ex.Message);
                     }
 
                 }

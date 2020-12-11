@@ -3,6 +3,11 @@
     ViewData["Title"] = "Đăng kí";
 }
 <!-- Breadcrumbs -->
+<style>
+    body {
+        font-size: 14px;
+    }
+</style>
 
 <div class="breadcrumbs">
     <div class="container">
@@ -30,29 +35,34 @@
                                 <div class="col-xs-12">
                                     <div class="check-title">
                                         <div asp-validation-summary="All" class="text-danger"></div>
-
                                     </div>
                                 </div>
                                 <div class="col-sm-6" style="margin-bottom: 15px;">
-                                    <label>Họ và tên:</label>
+                                    <label>Họ và tên:<span class="required">*</span></label>
                                     <div class="input-text">
                                         <input type="text" asp-for="FullName" name="fullName" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-sm-6" style="margin-bottom: 15px;">
-                                    <label>Email:</label>
+                                    <label>Tên đăng nhập:<span class="required">*</span></label>
+                                    <div class="input-text">
+                                        <input type="text" asp-for="UserName" name="userName" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" style="margin-bottom: 15px;">
+                                    <label>Email:<span class="required">*</span></label>
                                     <div class="input-text">
                                         <input type="text" asp-for="Email" name="email" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-xs-12" style="margin-bottom: 15px;">
-                                    <label>Mật khẩu:</label>
+                                    <label>Mật khẩu:<span class="required">*</span></label>
                                     <div class="input-text">
                                         <input type="password" asp-for="Password" name="password" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-xs-12" style="margin-bottom: 15px;">
-                                    <label>Xác nhận mật khẩu:</label>
+                                    <label>Xác nhận mật khẩu:<span class="required">*</span></label>
                                     <div class="input-text">
                                         <input type="password" asp-for="ConfirmPassword" name="confirmPassword" class="form-control">
                                     </div>
@@ -63,12 +73,18 @@
                                         <input type="date" asp-for="BirthDay" name="birthDay" class="form-control">
                                     </div>
                                 </div>
-                                @*<div class="col-xs-12">
-                                        <label>Avatar:</label>
-                                        <div class="input-text">
-                                            <input type="file" asp-for="Avatar" name="dob" class="form-control">
-                                        </div>
-                                    </div>*@
+                                <div class="col-xs-12" style="margin-bottom: 15px;">
+                                    <label>Giới tính:</label>
+                                    <div class="input-text">
+                                        <select asp-for="Sex" name="sex" style="width:47%;">
+                                            <option>-- Chọn --</option>
+                                            <option value="Nam">Nam</option>
+                                            <option value="Nữ">Nữ</option>
+                                        </select>
+                                        @*<input type="checkbox" asp-for="Sex" name="sex" class="form-control">*@
+                                    </div>
+                                </div>
+                                
                                 <div class="col-sm-6" style="margin-bottom: 15px;">
                                     <label>Số điện thoại:</label>
                                     <div class="input-text">

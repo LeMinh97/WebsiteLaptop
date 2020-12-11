@@ -62,7 +62,7 @@ namespace WebsiteLaptop.Application.Controllers
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
@@ -79,7 +79,7 @@ namespace WebsiteLaptop.Application.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Tên đăng nhập hoặc mật khẩu không đúng.");
                     return View(model);
                 }
             }
@@ -228,11 +228,12 @@ namespace WebsiteLaptop.Application.Controllers
             //MM/dd/yyy
             var user = new AppUser
             {
-                UserName = model.Email,
+                UserName = model.UserName,
                 Email = model.Email,
                 FullName = model.FullName,
                 PhoneNumber = model.PhoneNumber,
                 BirthDay = model.BirthDay,
+                Sex=model.Sex,
                 Status = Status.Active,
                 Avatar = string.Empty
             };

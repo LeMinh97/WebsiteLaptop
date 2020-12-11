@@ -16,6 +16,10 @@ namespace WebsiteLaptop.Application.Models.AccountViewModels
         public DateTime? BirthDay { set; get; }
 
         [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -33,6 +37,9 @@ namespace WebsiteLaptop.Application.Models.AccountViewModels
 
         [Display(Name = "Address")]
         public string Address { get; set; }
+
+        [Display(Name = "Sex")]
+        public string Sex { get; set; }
 
         [Display(Name = "Phone number")]
         public string PhoneNumber { set; get; }
