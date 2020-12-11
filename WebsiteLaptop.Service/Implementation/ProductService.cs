@@ -44,7 +44,7 @@ namespace WebsiteLaptop.Service.Implementation
             return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.ProductCategory)).ToList();
         }
 
-        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize, string sortBy)
+        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize, string sortBy="latest")
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
             if (!string.IsNullOrEmpty(keyword))
@@ -54,7 +54,12 @@ namespace WebsiteLaptop.Service.Implementation
 
             int totalRow = query.Count();
 
-            if(sortBy.Contains("oldest"))
+            if (sortBy == null)
+            {
+                query = query.OrderByDescending(x => x.DateCreated)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
+            else if (sortBy.Contains("oldest"))
             {
                 query = query.OrderBy(x => x.DateCreated)
                 .Skip((page - 1) * pageSize).Take(pageSize);
