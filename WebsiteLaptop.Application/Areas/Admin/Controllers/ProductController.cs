@@ -40,9 +40,9 @@ namespace WebsiteLaptop.Application.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
+        public IActionResult GetAllPaging(int? categoryId, string keyword, int page, int pageSize, string sortBy)
         {
-            var model = _productService.GetAllPaging(categoryId, keyword, page, pageSize);
+            var model = _productService.GetAllPaging(categoryId, keyword, page, pageSize, sortBy);
             return new OkObjectResult(model);
         }
 

@@ -11,6 +11,11 @@
         contactObj.initialize();
     </script>
 }
+<style>
+    #contact_form_map ul li i {
+        vertical-align: unset;
+    }
+</style>
 <input type="hidden" id="hidLng" value="@Model.Contact.Lng" />
 <input type="hidden" id="hidLat" value="@Model.Contact.Lat" />
 <input type="hidden" id="hidAddress" value="@Model.Contact.Address" />
@@ -38,23 +43,16 @@
                     <div class="page-title">
                         <h2>Liên hệ với chúng tôi</h2>
                     </div>
-                    @*<div id="message-box-conact">We're available for new projects</div>*@
                     <div class="row">
                         <div class="col-xs-12 col-sm-6" id="contact_form_map">
                             <h3 class="page-subheading">Hãy giữ liên lạc</h3>
-                            @*<p>Lorem ipsum dolor sit amet onsectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor dapibus eget. Mauris tincidunt aliquam lectus sed vestibulum. Vestibulum bibendum suscipit mattis.</p>*@
-                            @*<br />
-                                <ul>
-                                    <li><i class="fa fa-circle"></i> Praesent nec tincidunt turpis.</li>
-                                    <li><i class="fa fa-circle"></i> Aliquam et nisi risus.&nbsp;Cras ut varius ante.</li>
-                                    <li><i class="fa fa-circle"></i> Ut congue gravida dolor, vitae viverra dolor.</li>
-                                </ul>*@
-                            <br />
-                            <ul class="store_info">
-                                <li><i class="fa fa-home"></i>@Model.Contact.Address</li>
-                                <li><i class="fa fa-phone"></i><span>@Model.Contact.Phone</span></li>
-                                <li><i class="fa fa-envelope"></i>Email: <span><a href="mailto:@Model.Contact.Email">@Model.Contact.Email</a></span></li>
+                            <ul class="store_info" style=" padding-bottom: 15px; ">
+                                <li style=" font-size: 14px; "><i class="fa fa-home"></i>@Model.Contact.Address</li>
+                                <li style=" font-size: 14px; "><i class="fa fa-phone"></i><span>@Model.Contact.Phone</span></li>
+                                <li style=" font-size: 14px; "><i class="fa fa-envelope"></i>Email: <span><a href="mailto:@Model.Contact.Email">@Model.Contact.Email</a></span></li>
                             </ul>
+
+                            <div id="map" style="width:100%;height:24em;"></div>
                         </div>
                         <div class="col-sm-6">
                             @if (ViewData["Success"] != null)
@@ -75,11 +73,9 @@
 
                                 }
 
-
                             }
                             else
                             {
-                                <div id="map" style="width:100%;height:500px;"></div>
                                 <form action="/contact.html" method="post">
                                     <h3 class="page-subheading">Tạo một phản hồi</h3>
                                     <div asp-validation-summary="All" class="text-danger"></div>
@@ -95,7 +91,7 @@
                                         </div>
                                         <div class="form-selector">
                                             <label>Tin nhắn</label>
-                                            <textarea class="form-control input-sm" rows="10" asp-for="Feedback.Message"></textarea>
+                                            <textarea class="form-control input-sm" rows="10" asp-for="Feedback.Message" style="height: 150px;"></textarea>
                                         </div>
                                         <div class="form-selector">
                                             <button type="submit" class="button"><i class="icon-paper-plane icons"></i>&nbsp; <span>Gửi tin nhắn</span></button>
@@ -103,7 +99,6 @@
                                         </div>
                                     </div>
                                 </form>
-
                             }
                         </div>
                     </div>

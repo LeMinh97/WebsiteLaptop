@@ -44,7 +44,7 @@ namespace WebsiteLaptop.Service.Implementation
             return _mapper.ProjectTo<ProductViewModel>(_productRepository.FindAll(x => x.ProductCategory)).ToList();
         }
 
-        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize)
+        public PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize, string sortBy)
         {
             var query = _productRepository.FindAll(x => x.Status == Status.Active);
             if (!string.IsNullOrEmpty(keyword))
@@ -54,8 +54,35 @@ namespace WebsiteLaptop.Service.Implementation
 
             int totalRow = query.Count();
 
-            query = query.OrderByDescending(x => x.DateCreated)
+            if(sortBy.Contains("oldest"))
+            {
+                query = query.OrderBy(x => x.DateCreated)
                 .Skip((page - 1) * pageSize).Take(pageSize);
+            }else if (sortBy.Contains("price-asc"))
+            {
+                query = query.OrderBy(x => x.Price)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
+            else if (sortBy.Contains("price-desc"))
+            {
+                query = query.OrderByDescending(x => x.Price)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
+            else if (sortBy.Contains("name-asc"))
+            {
+                query = query.OrderBy(x => x.Name)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
+            else if (sortBy.Contains("name-desc"))
+            {
+                query = query.OrderByDescending(x => x.Name)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
+            else
+            {
+                query = query.OrderByDescending(x => x.DateCreated)
+                .Skip((page - 1) * pageSize).Take(pageSize);
+            }
 
             var data = _mapper.ProjectTo<ProductViewModel>(query).ToList();
 

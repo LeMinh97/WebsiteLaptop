@@ -33,16 +33,18 @@ namespace WebsiteLaptop.Application.Controllers
         }
 
         [Route("{alias}-c.{id}.html")]
-        public IActionResult Catalog(int id, int? pageSize, string sortBy, int page = 1)
+        public IActionResult Catalog(int id, int? pageSize, string sortBy= "latest", int page = 1)
         {
             var catalog = new CatalogViewModel();
             ViewData["BodyClass"] = "shop_grid_full_width_page";
             if (pageSize == null)
                 pageSize = _configuration.GetValue<int>("PageSize");
+            //if (sortBy == null)
+            //    pageSize = _configuration.GetValue<string>("SortBy");
 
             catalog.PageSize = pageSize;
             catalog.SortType = sortBy;
-            catalog.Data = _productService.GetAllPaging(id, string.Empty, page, pageSize.Value);
+            catalog.Data = _productService.GetAllPaging(id, string.Empty, page, pageSize.Value, sortBy);
             catalog.Category = _productCategoryService.GetById(id);
 
             return View(catalog);
@@ -67,32 +69,30 @@ namespace WebsiteLaptop.Application.Controllers
         }
 
         [Route("search.html")]
-        public IActionResult Search(string keyword, int? pageSize, string sortBy, int page = 1)
+        public IActionResult Search(string keyword, int? pageSize, string sortBy = "latest", int page = 1)
         {
             var catalog = new SearchResultViewModel();
             ViewData["BodyClass"] = "shop_grid_full_width_page";
             if (pageSize == null)
                 pageSize = _configuration.GetValue<int>("PageSize");
-
             catalog.PageSize = pageSize;
             catalog.SortType = sortBy;
-            catalog.Data = _productService.GetAllPaging(null, keyword, page, pageSize.Value);
+            catalog.Data = _productService.GetAllPaging(null, keyword, page, pageSize.Value, sortBy);
             catalog.Keyword = keyword;
 
             return View(catalog);
         }
 
         [Route("products.html")]
-        public IActionResult AllProducts( int? pageSize, string sortBy, int page = 1)
+        public IActionResult AllProducts( int? pageSize, string sortBy = "latest", int page = 1)
         {
             var catalog = new CatalogViewModel();
             ViewData["BodyClass"] = "shop_grid_full_width_page";
             if (pageSize == null)
                 pageSize = _configuration.GetValue<int>("PageSize");
-
             catalog.PageSize = pageSize;
             catalog.SortType = sortBy;
-            catalog.Data = _productService.GetAllPaging( null, string.Empty, page, pageSize.Value);
+            catalog.Data = _productService.GetAllPaging( null, string.Empty, page, pageSize.Value, sortBy);
 
             return View(catalog);
         }

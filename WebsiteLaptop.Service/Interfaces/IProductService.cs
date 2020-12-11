@@ -9,7 +9,7 @@ namespace WebsiteLaptop.Service.Interfaces
     public interface IProductService : IDisposable
     {
         List<ProductViewModel> GetAll();
-        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize);
+        PagedResult<ProductViewModel> GetAllPaging(int? categoryId, string keyword, int page, int pageSize, string sortBy);
 
         ProductViewModel Add(ProductViewModel product);
 

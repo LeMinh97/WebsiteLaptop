@@ -1,8 +1,29 @@
 ﻿@model List<WebsiteLaptop.Service.ViewModels.Product.ProductCategoryViewModel>
 @{
-    ViewData["Title"] = "Tất cả các loại sản phẩm";
+    ViewData["Title"] = "Danh mục sản phẩm";
 }
 <!-- Breadcrumbs -->
+<style>
+    .category-item {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px;
+    }
+
+        .category-item:hover {
+            color: #e83f33;
+            background: #ececec;
+        }
+
+    .product-item .pr-img-area > a::before {
+        background: none;
+        transition: none;
+    }
+
+    .product-item .item-inner:hover {
+        box-shadow: none;
+    }
+</style>
 
 <div class="breadcrumbs">
     <div class="container">
@@ -36,11 +57,9 @@
                                     <div class="product-item">
                                         <div class="item-inner">
                                             <div class="product-thumbnail">
-                                                @*<div class="icon-sale-label sale-left">Giảm giá</div>
-                                                <div class="icon-new-label new-right">Mới</div>*@
                                                 <div class="pr-img-area">
-                                                    <a title="@item.Name" href="@url">
-                                                        <figure> <img class="first-img" src="@item.Image" alt="@item.Name"> <img class="hover-img" src="@item.Image" alt="@item.Name"></figure>
+                                                    <a title="@item.Name" href="@url" class="category-item">
+                                                        @item.Name
                                                     </a>
                                                 </div>
 

@@ -120,93 +120,81 @@
 
 <!-- All products-->
 
+@*@await Component.InvokeAsync("Brand")*@
+
 <div class="container">
-    <div class="home-tab">
-        <div class="tab-title text-left">
-            <h2>Sản phẩm</h2>
-            <ul class="nav home-nav-tabs home-product-tabs">
-                @for (var i = 0; i < Model.HomeCategories.Count; i++)
-                {
-                    var item = Model.HomeCategories[i];
-                    if (i == 0)
-                    {
-                        <li class="active"><a href="#@item.Alias" data-toggle="tab" aria-expanded="false">@item.Name</a></li>
-                    }
-                    else
-                    {
-                        <li><a href="#@item.Alias" data-toggle="tab" aria-expanded="false">@item.Name</a></li>
-                    }
-                }
-            </ul>
-        </div>
-        <div id="productTabContent" class="tab-content">
-            @for (var i = 0; i < Model.HomeCategories.Count; i++)
-            {
-                var category = Model.HomeCategories[i];
-                string css = string.Empty;
-                if (i == 0)
-                {
-                    css = "tab-pane active in";
-                }
-                else
-                {
-                    css = "tab-pane wow fadeInLeft";
-                }
-                <div class="@css" id="@category.Alias">
-                    <div class="featured-pro">
-                        <div class="slider-items-products">
-                            <div id="computer-slider" class="product-flexslider hidden-buttons">
-                                <div class="slider-items slider-width-col4">
-                                    @foreach (var item in category.Products)
-                                    {
-                                        <div class="product-item">
-                                            <div class="item-inner">
-                                                <div class="product-thumbnail">
-                                                    <div class="icon-new-label new-left">mới</div>
-                                                    <div class="pr-img-area">
-                                                        <a title="@item.Name" href="/@item.Alias-p.@(item.Id).html">
-                                                            <figure>
-                                                                <img class="first-img" src="@item.Image" alt="@item.Name">
-                                                                <img class="hover-img" src="@item.Image" alt="@item.Name">
-                                                            </figure>
-                                                        </a>
+    <div class="row">
+        <div class="col-main col-sm-12 col-xs-12">
+            <div class="shop-inner">
+                <div class="page-title" style="margin-top: 30px;">
+                    <h2>Sản phẩm</h2>
+                </div>
+                <div class="toolbar column">
+                    <form action="/products.html" method="get">
+                        <div class="sorter">
+                            <div class="short-by">
+                                <label>Sắp xếp theo:</label>
+                                <select name="sortBy" asp-for="SortType"
+                                        onchange="this.form.submit()" asp-items="Model.SortTypes"></select>
+                            </div>
+                            <div class="short-by page">
+                                <label>Show:</label>
+                                <select name="pageSize" asp-for="PageSize" onchange="this.form.submit()"
+                                        asp-items="Model.PageSizes"></select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="product-grid-area">
+                    <ul class="products-grid">
+                        @foreach (var item in Model.Data.Results)
+                        {
+                            var url = "/" + item.Alias + "-p." + item.Id + ".html";
+                            <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
+                                <div class="product-item">
+                                    <div class="item-inner">
+                                        <div class="product-thumbnail">
+                                            <div class="icon-sale-label sale-left">Giảm giá</div>
+                                            <div class="icon-new-label new-right">Mới</div>
+                                            <div class="pr-img-area">
+                                                <a title="Ipsums Dolors Untra" href="@url">
+                                                    <figure> <img class="first-img" src="@item.Image" alt="@item.Name"> <img class="hover-img" src="@item.Image" alt="@item.Name"></figure>
+                                                </a>
+                                            </div>
+                                            @*<div class="pr-info-area">
+                                                    <div class="pr-button">
+                                                        <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
+                                                        <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
+                                                        <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
                                                     </div>
-                                                    @*<div class="pr-info-area">
-                                                        <div class="pr-button">
-                                                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart-o"></i> </a> </div>
-                                                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-link"></i> </a> </div>
-                                                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                                                        </div>
-                                                    </div>*@
-                                                </div>
-                                                <div class="item-info">
-                                                    <div class="info-inner">
-                                                        <div class="item-title"> <a title="Product title here" href="/@item.Name-p.@(item.Id).html">@item.Name </a> </div>
-                                                        <div class="item-content">
-                                                            @*<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>*@
-                                                            <div class="item-price">
-                                                                <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
-                                                            </div>
-                                                            <div class="pro-action">
-                                                                <button type="button" class="add-to-cart" data-id="@item.Id"><span> Mua ngay</span> </button>
-                                                            </div>
-                                                        </div>
+                                                </div>*@
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="info-inner">
+                                                <div class="item-title"> <a title="@item.Name" href="@url">@item.Name</a> </div>
+                                                <div class="item-content">
+                                                    @*<div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>*@
+                                                    <div class="item-price">
+                                                        <div class="price-box"> <span class="regular-price"> <span class="price">@item.Price.ToString("N0")</span> </span> </div>
+                                                    </div>
+                                                    <div class="pro-action">
+                                                        <button type="button" class="add-to-cart" data-id="@item.Id"><span> Thêm vào giỏ</span> </button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    }
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </li>
+
+                        }
+
+                    </ul>
                 </div>
-            }
+                @(await Component.InvokeAsync("Pager", Model.Data))
+            </div>
         </div>
     </div>
 </div>
-
-
-@await Component.InvokeAsync("Brand")
 
 <!-- BANNER-AREA-END -->

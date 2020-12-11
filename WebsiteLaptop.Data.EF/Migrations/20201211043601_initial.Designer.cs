@@ -10,7 +10,7 @@ using WebsiteLaptop.Data.EF;
 namespace WebsiteLaptop.Data.EF.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20201210081654_initial")]
+    [Migration("20201211043601_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
