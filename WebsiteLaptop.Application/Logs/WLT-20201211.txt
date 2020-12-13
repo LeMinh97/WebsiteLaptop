@@ -215,3 +215,59 @@ System.InvalidOperationException: The view 'Index' was not found. The following 
 2020-12-11T18:00:04.9478705+07:00  [INF] Content root path: "E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
 2020-12-11T18:00:22.3791208+07:00 0HM4TOFL7PG8R:00000035 [INF] User logged in. (fdce0db4)
 2020-12-11T18:01:02.8138987+07:00  [INF] Application is shutting down... (90f52c38)
+2020-12-11T21:15:21.8195397+07:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-12-11T21:15:21.8498552+07:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-12-11T21:15:21.8559412+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-12-11T21:15:21.8588718+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-12-11T21:15:21.8615104+07:00  [INF] Content root path: "E:\KLTN\WebsiteLaptop\WebsiteLaptop.Application" (b5d60022)
+2020-12-11T21:15:34.9672240+07:00 0HM4TRSP3H125:00000001 [ERR] Failed executing DbCommand ("5,841"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [t].[Alias], [t].[DateCreated], [t].[DateModified], [t].[Description], [t].[HomeFlag], [t].[HomeOrder], [t].[Id], [t].[Image], [t].[Name], [t].[ParentId], [t].[SortOrder], [t].[Status], [p0].[Alias], [p0].[Brand], [p0].[CategoryId], [p0].[ConnectPort], [p0].[Content], [p0].[CPU], [p0].[DateCreated], [p0].[DateModified], [p0].[Description], [p0].[Design], [p0].[GPU], [p0].[HardDrive], [p0].[HomeFlag], [p0].[HotFlag], [p0].[Id], [p0].[Image], [p0].[Name], [p0].[OriginalPrice], [p0].[OS], [p0].[Pin], [p0].[Price], [p0].[PromotionPrice], [p0].[RAM], [p0].[Screen], [p0].[Size], [p0].[Status], [p0].[Tags], [p0].[Unit], [p0].[ViewCount], [p0].[YearLaunch]
+FROM (
+    SELECT TOP(@__p_0) [p].[Alias], [p].[DateCreated], [p].[DateModified], [p].[Description], [p].[HomeFlag], [p].[HomeOrder], [p].[Id], [p].[Image], [p].[Name], [p].[ParentId], [p].[SortOrder], [p].[Status]
+    FROM [ProductCategories] AS [p]
+    WHERE [p].[HomeFlag] = CAST(1 AS bit)
+    ORDER BY [p].[HomeOrder]
+) AS [t]
+LEFT JOIN [Products] AS [p0] ON [t].[Id] = [p0].[CategoryId]
+ORDER BY [t].[HomeOrder], [t].[Id], [p0].[Id]" (627a98df)
+2020-12-11T21:15:35.1624792+07:00 0HM4TRSP3H125:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"WebsiteLaptop.Data.EF.AppDbContext"'."
+""Microsoft.Data.SqlClient.SqlException (0x80131904): There is insufficient system memory in resource pool 'default' to run this query.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:433c3114-dc77-48fa-b9af-b399e3c1ce18
+Error Number:701,State:123,Class:17" (f5c7ac34)
+Microsoft.Data.SqlClient.SqlException (0x80131904): There is insufficient system memory in resource pool 'default' to run this query.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:433c3114-dc77-48fa-b9af-b399e3c1ce18
+Error Number:701,State:123,Class:17

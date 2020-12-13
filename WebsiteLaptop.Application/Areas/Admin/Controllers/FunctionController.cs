@@ -51,6 +51,13 @@ namespace WebsiteLaptop.Application.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        public IActionResult GetAllPaging( string keyword, int page, int pageSize)
+        {
+            var model = _functionService.GetAllPaging( keyword, page, pageSize);
+            return new OkObjectResult(model);
+        }
+
+        [HttpGet]
         public IActionResult GetById(string id)
         {
             var model = _functionService.GetAll(id);

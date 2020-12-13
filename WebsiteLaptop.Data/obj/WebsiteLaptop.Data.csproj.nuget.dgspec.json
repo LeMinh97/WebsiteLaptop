@@ -10,11 +10,14 @@
         "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
         "projectName": "WebsiteLaptop.Data",
         "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\WebsiteLaptop.Data.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
         "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -90,11 +93,14 @@
         "projectUniqueName": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
         "projectName": "WebsiteLaptop.Infrastructure",
         "projectPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\WebsiteLaptop.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\MH\\.nuget\\packages\\",
         "outputPath": "E:\\KLTN\\WebsiteLaptop\\WebsiteLaptop.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using WebsiteLaptop.Service.ViewModels.System;
+using WebsiteLaptop.Utilities.Dtos;
 
 namespace WebsiteLaptop.Service.Interfaces
 {
@@ -11,6 +12,8 @@ namespace WebsiteLaptop.Service.Interfaces
         void Add(FunctionViewModel function);
 
         Task<List<FunctionViewModel>> GetAll(string filter);
+
+        PagedResult<FunctionViewModel> GetAllPaging( string keyword, int page, int pageSize);
 
         IEnumerable<FunctionViewModel> GetAllWithParentId(string parentId);
 

@@ -56,7 +56,7 @@
                 url: '/admin/Product/SaveImages',
                 data: {
                     productId: $('#hidId').val(),
-                    images: images
+                    images: imageList
                 },
                 type: 'post',
                 dataType: 'json',
@@ -79,7 +79,8 @@
             success: function (response) {
                 var render = '';
                 $.each(response, function (i, item) {
-                    render += '<div class="col-md-3"><img width="100" src="' + item.Path + '"><br/><a href="#" class="btn-delete-image">Xóa</a></div>'
+                    //render += '<div class="col-md-3"><img width="100" src="' + item.Path + '"><br/><a href="#" class="btn-delete-image">Xóa</a></div>'
+                    render += '<div class="col-md-3"><img width="100" data-path="' + item.Path + '" src="' + item.Path + '"><br/><a href="#" class="btn-delete-image">Xóa</a></div>'
                 });
                 $('#image-list').html(render);
                 clearFileInput();

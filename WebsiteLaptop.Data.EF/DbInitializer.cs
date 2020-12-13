@@ -72,6 +72,62 @@ namespace WebsiteLaptop.Data.EF
                 }, "123456");
                 var user = await _userManager.FindByNameAsync("admin");
                 await _userManager.AddToRoleAsync(user, "Admin");
+
+                await _userManager.CreateAsync(new AppUser()
+                {
+                    UserName = "minh123",
+                    FullName = "Lê Minh",
+                    Email = "minh123@gmail.com",
+                    Balance = 0,
+                    DateCreated = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    Status = Status.Active,
+                    Avatar = "/admin-side/images/admin-avatar.jpg"
+                }, "123456");
+                var user1 = await _userManager.FindByNameAsync("minh123");
+                await _userManager.AddToRoleAsync(user1, "Khách Hàng");
+
+                await _userManager.CreateAsync(new AppUser()
+                {
+                    UserName = "manage123",
+                    FullName = "Manage123",
+                    Email = "manage123@gmail.com",
+                    Balance = 0,
+                    DateCreated = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    Status = Status.Active,
+                    Avatar = "/admin-side/images/admin-avatar.jpg"
+                }, "123456");
+                var user2 = await _userManager.FindByNameAsync("manage123");
+                await _userManager.AddToRoleAsync(user2, "Quản Lí");
+
+                await _userManager.CreateAsync(new AppUser()
+                {
+                    UserName = "sale123",
+                    FullName = "Sale123",
+                    Email = "sale123@gmail.com",
+                    Balance = 0,
+                    DateCreated = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    Status = Status.Active,
+                    Avatar = "/admin-side/images/admin-avatar.jpg"
+                }, "123456");
+                var user3 = await _userManager.FindByNameAsync("sale123");
+                await _userManager.AddToRoleAsync(user3, "Nhân Viên Bán Hàng");
+
+                await _userManager.CreateAsync(new AppUser()
+                {
+                    UserName = "ship123",
+                    FullName = "Ship123",
+                    Email = "ship123@gmail.com",
+                    Balance = 0,
+                    DateCreated = DateTime.Now,
+                    DateModified = DateTime.Now,
+                    Status = Status.Active,
+                    Avatar = "/admin-side/images/admin-avatar.jpg"
+                }, "123456");
+                var user4 = await _userManager.FindByNameAsync("ship123");
+                await _userManager.AddToRoleAsync(user4, "Nhân Viên Giao Hàng");
             }
             if (_context.Functions.Count() == 0)
             {

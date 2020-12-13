@@ -12,6 +12,7 @@ using WebsiteLaptop.Data.IRepositories;
 using WebsiteLaptop.Infrastructure.Interfaces;
 using WebsiteLaptop.Service.Interfaces;
 using WebsiteLaptop.Service.ViewModels.System;
+using WebsiteLaptop.Utilities.Dtos;
 
 namespace WebsiteLaptop.Service.Implementation
 {
@@ -106,6 +107,26 @@ namespace WebsiteLaptop.Service.Implementation
                 child.SortOrder = items[child.Id];
                 _functionRepository.Update(child);
             }
+        }
+
+        public PagedResult<FunctionViewModel> GetAllPaging( string keyword, int page, int pageSize)
+        {
+            var query = _functionRepository.FindAll(x => x.Status == Status.Active);
+            if (!string.IsNullOrEmpty(keyword))
+                query = query.Where(x => x.Name.Contains(keyword));
+
+            int totalRow = query.Count();
+
+            var data = _mapper.ProjectTo<FunctionViewModel>(query).ToList();
+
+            var paginationSet = new PagedResult<FunctionViewModel>()
+            {
+                Results = data,
+                CurrentPage = page,
+                RowCount = totalRow,
+                PageSize = pageSize
+            };
+            return paginationSet;
         }
     }
 }

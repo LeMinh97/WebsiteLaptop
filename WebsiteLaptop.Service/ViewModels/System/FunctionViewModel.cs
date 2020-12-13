@@ -21,6 +21,8 @@ namespace WebsiteLaptop.Service.ViewModels.System
         [StringLength(128)]
         public string ParentId { set; get; }
 
+        public FunctionViewModel ParentFunction { set; get; }
+
         public string IconCss { get; set; }
         public int SortOrder { set; get; }
         public Status Status { set; get; }
