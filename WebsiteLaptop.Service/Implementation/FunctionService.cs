@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,15 +18,19 @@ namespace WebsiteLaptop.Service.Implementation
 {
     public class FunctionService : IFunctionService
     {
+        private RoleManager<AppRole> _roleManager;
         private IFunctionRepository _functionRepository;
+        private IPermissionRepository _permissionRepository;
         private IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public FunctionService(IFunctionRepository functionRepository, IMapper mapper, IUnitOfWork unitOfWork)
+        public FunctionService(IFunctionRepository functionRepository, IMapper mapper, IUnitOfWork unitOfWork, IPermissionRepository permissionRepository, RoleManager<AppRole> roleManager)
         {
             _functionRepository = functionRepository;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _permissionRepository = permissionRepository;
+            _roleManager = roleManager;
         }
 
         public void Dispose()
@@ -50,12 +55,22 @@ namespace WebsiteLaptop.Service.Implementation
             return _mapper.Map<Function, FunctionViewModel>(function);
         }
 
-        public Task<List<FunctionViewModel>> GetAll(string filter)
+        public Task<List<FunctionViewModel>> GetAll(string roles)
         {
             var query = _functionRepository.FindAll(x => x.Status == Status.Active);
-            if (!string.IsNullOrEmpty(filter))
-                query = query.Where(x => x.Name.Contains(filter));
-            return _mapper.ProjectTo<FunctionViewModel>(query.OrderBy(x => x.ParentId)).ToListAsync();
+            if (!string.IsNullOrEmpty(roles))
+            {
+                string[] arrRoles = roles.Split(";");
+
+                var functions = _functionRepository.FindAll();
+                var permissions = _permissionRepository.FindAll();
+                query = from f in functions
+                        join p in permissions on f.Id equals p.FunctionId
+                        join r in _roleManager.Roles on p.RoleId equals r.Id
+                        where roles.Contains(r.Name) && p.CanRead
+                        select f;
+            }
+            return _mapper.ProjectTo<FunctionViewModel>(query.Distinct().OrderBy(x => x.ParentId)).ToListAsync();
         }
 
         public IEnumerable<FunctionViewModel> GetAllWithParentId(string parentId)

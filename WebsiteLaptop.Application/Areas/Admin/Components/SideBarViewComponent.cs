@@ -31,7 +31,7 @@ namespace WebsiteLaptop.Application.Areas.Admin.Components
             else
             {
                 //TODO: Get by permission
-                functions = await _functionService.GetAll(string.Empty);
+                functions = await _functionService.GetAll(roles);
             }
             return View(functions);
         }
